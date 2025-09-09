@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace App\MoonShine\Layouts;
 
+use App\MoonShine\Resources\MoonShineUserResource;
+use App\MoonShine\Resources\MoonShineUserRoleResource;
+
 use MoonShine\Laravel\Layouts\AppLayout;
 use MoonShine\ColorManager\ColorManager;
 use MoonShine\Contracts\ColorManager\ColorManagerContract;
@@ -31,6 +34,19 @@ use MoonShine\UI\Components\{Breadcrumbs,
     Layout\Wrapper,
     When};
 
+    use MoonShine\MenuManager\MenuGroup;
+    use MoonShine\MenuManager\MenuItem;
+    use App\MoonShine\Resources\GroupResource;
+    use App\MoonShine\Resources\HomeSliderResource;
+    use App\MoonShine\Resources\PhotoCardResource;
+    use App\MoonShine\Resources\QabulrasmiResource;
+    use App\MoonShine\Resources\SliderResource;
+    use App\MoonShine\Resources\TeacherResource;
+    use App\MoonShine\Resources\VideoResource;
+    use App\MoonShine\Resources\UserResource;
+
+
+
 final class MoonShineLayout extends AppLayout
 {
     protected function assets(): array
@@ -43,7 +59,22 @@ final class MoonShineLayout extends AppLayout
     protected function menu(): array
     {
         return [
-            ...parent::menu(),
+            MenuGroup::make('System', [
+                MenuItem::make('Admins', MoonShineUserResource::class),
+                MenuItem::make('Roles', MoonShineUserRoleResource::class),
+            ]),
+            
+            MenuItem::make('GroupResource',GroupResource::class),
+            MenuItem::make('HomeSliderResource', HomeSliderResource::class),
+            MenuItem::make('PhotoCardResource', PhotoCardResource::class),
+            MenuItem::make('QabulrasmiResource', QabulrasmiResource::class),
+            MenuItem::make('SliderResource',SliderResource::class),
+            MenuItem::make('TeacherResource', TeacherResource::class),
+            MenuItem::make('VideoResource', VideoResource::class),
+            MenuItem::make('UserResource', UserResource::class),
+            
+
+
         ];
     }
 

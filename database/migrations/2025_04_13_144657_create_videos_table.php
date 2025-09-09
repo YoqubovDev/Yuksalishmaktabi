@@ -6,23 +6,17 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
         Schema::create('videos', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->string('video_url'); // YouTube yoki boshqa link
-            $table->date('published_at')->nullable();
-            $table->timestamps();
+            $table->string('title');            // Video sarlavhasi
+            $table->string('url', 500);         // YouTube URL
+            $table->date('published_at')->nullable(); // Sana
+            $table->timestamps();               // created_at va updated_at
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::dropIfExists('videos');
