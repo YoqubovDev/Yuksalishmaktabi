@@ -7,23 +7,47 @@ use Illuminate\Http\Request;
 
 class VideoController extends Controller
 {
+    // Barcha videolarni chiqarish
     public function index()
     {
-        $videolar = Video::all(); // or your query to get the videos
+        $videos = Video::latest()->get();
 
-        // Define the helper function in the controller
-        $getYoutubeId = function($url) {
-            if (str_contains($url, 'youtu.be/')) {
-                return \Illuminate\Support\Str::after($url, 'youtu.be/');
-            } elseif (str_contains($url, 'watch?v=')) {
-                return \Illuminate\Support\Str::after($url, 'v=');
-            } elseif (str_contains($url, 'embed/')) {
-                return \Illuminate\Support\Str::after($url, 'embed/');
-            } else {
-                return '';
-            }
-        };
+        return view('videos.index', compact('videos'));
+    }
 
-        return view('photopage', compact('videolar', 'getYoutubeId'));
+    // Yangi video qo‘shish
+    public function store(Request $request)
+    {
+        $request->validate([
+            'title' => 'required|string|max:255',
+            'url' => 'required|url',
+            'published_at' => 'nullable|date',
+        ]);
+
+        Video::create($request->all());
+
+        return redirect()->back()->with('success', 'Video muvaffaqiyatli qo‘shildi');
+    }
+
+    // Video tahrirlash
+    public function update(Request $request, Video $video)
+    {
+        $request->validate([
+            'title' => 'required|string|max:255',
+            'url' => 'required|url',
+            'published_at' => 'nullable|date',
+        ]);
+
+        $video->update($request->all());
+
+        return redirect()->back()->with('success', 'Video yangilandi');
+    }
+
+    // Video o‘chirish
+    public function destroy(Video $video)
+    {
+        $video->delete();
+
+        return redirect()->back()->with('success', 'Video o‘chirildi');
     }
 }

@@ -18,6 +18,7 @@ use App\MoonShine\Resources\GroupResource;
 use App\MoonShine\Resources\TeacherResource;
 use App\MoonShine\Resources\HomeSliderResource;
 use App\MoonShine\Resources\QabulrasmiResource;
+use App\MoonShine\Resources\UserResource;
 
 class MoonShineServiceProvider extends ServiceProvider
 {
@@ -41,6 +42,7 @@ class MoonShineServiceProvider extends ServiceProvider
                 TeacherResource::class,
                 HomeSliderResource::class,
                 QabulrasmiResource::class,
+                UserResource::class,
             ])
             ->pages([
                 ...$config->getPages(),
