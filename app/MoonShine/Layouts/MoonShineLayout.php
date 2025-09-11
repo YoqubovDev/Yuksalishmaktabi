@@ -44,6 +44,7 @@ use MoonShine\UI\Components\{Breadcrumbs,
     use App\MoonShine\Resources\TeacherResource;
     use App\MoonShine\Resources\VideoResource;
     use App\MoonShine\Resources\UserResource;
+    use App\MoonShine\Resources\ContactResource;
 
 
 
@@ -72,9 +73,7 @@ final class MoonShineLayout extends AppLayout
             MenuItem::make('TeacherResource', TeacherResource::class),
             MenuItem::make('VideoResource', VideoResource::class),
             MenuItem::make('UserResource', UserResource::class),
-            
-
-
+            MenuItem::make('Contacts', ContactResource::class),
         ];
     }
 
