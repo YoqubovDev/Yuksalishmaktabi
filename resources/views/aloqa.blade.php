@@ -409,6 +409,7 @@
                 Bog'lanish ma'lumotlari
                 <span class="absolute bottom-0 left-0 h-1 w-full bg-university-blue"></span>
             </h2>
+            <p class="text-blue-600 font-medium">{{$contact}}</p>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div class="contact-card bg-gray-50 rounded-lg p-6 shadow-sm">
