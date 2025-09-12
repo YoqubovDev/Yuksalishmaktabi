@@ -401,7 +401,6 @@
         <p class="text-gray-600 max-w-2xl mx-auto">Turin akademik litseyi bilan bog'lanish uchun quyidagi ma'lumotlardan foydalanishingiz mumkin</p>
         <div class="w-24 h-1 bg-university-blue mx-auto mt-4"></div>
     </div>
-
     <div class="bg-white rounded-xl shadow-elegant p-8 flex flex-col md:flex-row">
         <!-- Contact information with enhanced design -->
         <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
@@ -409,7 +408,7 @@
                 Bog'lanish ma'lumotlari
                 <span class="absolute bottom-0 left-0 h-1 w-full bg-university-blue"></span>
             </h2>
-            <p class="text-blue-600 font-medium">{{$contact}}</p>
+                
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div class="contact-card bg-gray-50 rounded-lg p-6 shadow-sm">
@@ -418,7 +417,7 @@
                     </div>
                     <h3 class="font-bold text-lg text-university-blue mb-2">Manzil:</h3>
                     <p class="text-gray-700">
-                        O'zbekiston, Toshkent, Olmazor tumani, Umid ko'chasi 1A.
+                        {{$contact->address}}
                     </p>
                 </div>
 
@@ -427,8 +426,8 @@
                         <i class="fas fa-phone-alt text-white text-xl"></i>
                     </div>
                     <h3 class="font-bold text-lg text-university-blue mb-2">Telefon:</h3>
-                    <p class="text-gray-700">(+99871) 246-23-31</p>
-                    <p class="text-gray-700">Fax: (+99871) 246-23-31</p>
+                    <p class="text-gray-700">(+998) {{$contact->phone}} </p>
+                    <p class="text-gray-700">Fax: (+998) {{$contact->fax}}</p>
                 </div>
 
                 <div class="contact-card bg-gray-50 rounded-lg p-6 shadow-sm">
@@ -437,7 +436,7 @@
                     </div>
                     <h3 class="font-bold text-lg text-university-blue mb-2">Email:</h3>
                     <p class="text-gray-700">
-                        <a href="mailto:turinlitsey@polito.uz" class="text-blue-600 hover:underline">turinlitsey@polito.uz</a>
+                        <a href="mailto:turinlitsey@polito.uz" class="text-blue-600 hover:underline">{{$contact->email}}</a>
                     </p>
                 </div>
 
@@ -447,8 +446,8 @@
                     </div>
                     <h3 class="font-bold text-lg text-university-blue mb-2">Ish vaqti:</h3>
                     <p class="text-gray-700">
-                        Dushanba - shanba (09:00 - 18:00)<br>
-                        Tushlik vaqti: 13:00 - 14:00
+                        Dushanba - shanba {{$contact->work_time}}<br>
+                        Tushlik vaqti: {{$contact->lunch_time}}
                     </p>
                 </div>
             </div>
@@ -459,16 +458,16 @@
                 </div>
                 <h3 class="font-bold text-lg text-university-blue mb-2">Transport:</h3>
                 <p class="text-gray-700">
-                    Avtobus: 88, 124 <br>
-                    Marshut: M90 <br>
-                    Bekat: Olmazor tumani hokimligi, 123
+                    Avtobus: {{$contact->bus}} <br>
+                    Marshut: {{$contact->marshrut}}<br>
+                    Bekat: Yuksalish bekari
                 </p>
             </div>
 
             <div class="mt-10">
                 <h3 class="font-bold text-lg text-university-blue mb-4">Ijtimoiy tarmoqlar:</h3>
                 <div class="flex space-x-4">
-                    <a href="#" class="social-icon bg-blue-500 hover:bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center transition">
+                    <a href="{{$contact->telegram}}" class="social-icon bg-blue-500 hover:bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center transition">
                         <i class="fab fa-telegram text-lg"></i>
                     </a>
                     <a href="#" class="social-icon bg-blue-600 hover:bg-blue-700 text-white rounded-full w-12 h-12 flex items-center justify-center transition">
@@ -488,14 +487,15 @@
         <div class="md:w-1/2">
             <div class="map-container">
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1497.5190681556148!2d69.224164!3d41.3515248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8c690928b343%3A0x95b56aea31384f98!2sAcademic%20Lyceum%20under%20Turin%20Polytechnic%20University!5e0!3m2!1sru!2s!4v1742761236770!5m2!1sru!2s"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3171.1234567890123!2d69.20000000000001!3d41.30000000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38aexxxxxxxxxxxx%3A0xyyyyyyyyyyyyyyyy!2sTurin+Akademik+Litsey!5e0!3m2!1suz!2s!4v1700000000000"
                     width="100%"
-                    height="100%"
+                    height="450"
                     style="border:0;"
                     allowfullscreen=""
                     loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
+
             </div>
 
             <div class="mt-6 bg-gray-50 rounded-lg p-6 shadow-sm">
@@ -507,7 +507,7 @@
                         </div>
                         <a href="#" class="text-blue-500 hover:underline text-sm">O'quvchilar bahosi (122 ta)</a>
                     </div>
-                    <a href="https://goo.gl/maps/YourSpecificMapLink" target="_blank" class="text-white bg-university-blue hover:bg-blue-700 transition-colors duration-300 px-4 py-2 rounded-lg text-sm font-medium flex items-center">
+                    <a href="{{$contact->map_link}}" target="_blank" class="text-white bg-university-blue hover:bg-blue-700 transition-colors duration-300 px-4 py-2 rounded-lg text-sm font-medium flex items-center">
                         <i class="fas fa-map-marked-alt mr-2"></i> Google Maps-da ko'rish
                     </a>
                 </div>
@@ -539,16 +539,16 @@
                         Turin akademik litseyi O'zbekiston va Italiya hamkorligidagi nufuzli ta'lim muassasasi bo'lib, zamonaviy ta'lim va innovatsion yondashuvlarga asoslangan.
                     </p>
                     <div class="flex space-x-4">
-                        <a href="#" class="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-university-blue transition-all duration-300">
+                        <a href="{{$contact->telegram}}" class="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-university-blue transition-all duration-300">
                             <i class="fab fa-telegram"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-university-blue transition-all duration-300">
+                        <a href="{{$contact->facebook}}" class="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-university-blue transition-all duration-300">
                             <i class="fab fa-facebook-f"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-university-blue transition-all duration-300">
+                        <a href="{{$contact->youtube}}" class="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-university-blue transition-all duration-300">
                             <i class="fab fa-youtube"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-university-blue transition-all duration-300">
+                        <a href="$contact->instagram" class="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-university-blue transition-all duration-300">
                             <i class="fab fa-instagram"></i>
                         </a>
                     </div>
@@ -564,7 +564,7 @@
                             </div>
                             <div>
                                 <div class="text-gray-400 text-sm">Manzil</div>
-                                <div class="text-white">O'zbekiston, Toshkent, Olmazor tumani, Umid ko'chasi 1A</div>
+                                <div class="text-white">{{$contact->manzil}}</div>
                             </div>
                         </div>
 
@@ -574,7 +574,7 @@
                             </div>
                             <div>
                                 <div class="text-gray-400 text-sm">Telefon</div>
-                                <div class="text-white">(+99871) 246-23-31</div>
+                                <div class="text-white">(+998) {{$contact->phone}}</div>
                             </div>
                         </div>
 
@@ -584,7 +584,7 @@
                             </div>
                             <div>
                                 <div class="text-gray-400 text-sm">Email</div>
-                                <a href="mailto:turinlitsey@polito.uz" class="text-white hover:text-blue-300 transition-colors duration-300">turinlitsey@polito.uz</a>
+                                <a href="{{$contact->email}}" class="text-white hover:text-blue-300 transition-colors duration-300">{{$contact->email}}</a>
                             </div>
                         </div>
                     </div>
@@ -615,9 +615,9 @@
                         <a href="#" class="footer-nav-item text-gray-300 hover:text-white transition-colors duration-300">
                             <i class="fas fa-chevron-right"></i> O'qituvchilar
                         </a>
-                        <a href="#" class="footer-nav-item text-gray-300 hover:text-white transition-colors duration-300">
+                        <!-- <a href="#" class="footer-nav-item text-gray-300 hover:text-white transition-colors duration-300">
                             <i class="fas fa-chevron-right"></i> Aloqa
-                        </a>
+                        </a> -->
                     </div>
                 </div>
             </div>
