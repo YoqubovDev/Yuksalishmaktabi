@@ -11,8 +11,9 @@ class ContactController extends Controller
     public function index()
     {
         // Faqat bitta contact bor deb hisoblaymiz
-        $contact = Contact::first();
+        $contact = Contact::latest()->first();
         return view('aloqa', compact('contact'));
+        
     }
 
     // Store a newly created contact in storage
