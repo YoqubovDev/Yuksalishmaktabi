@@ -7,16 +7,13 @@ use Illuminate\Http\Request;
 
 class ContactController extends Controller
 {
-    // Display a listing of the contacts
     public function index()
     {
-        // Faqat bitta contact bor deb hisoblaymiz
         $contact = Contact::latest()->first();
         return view('aloqa', compact('contact'));
         
     }
 
-    // Store a newly created contact in storage
     public function store(Request $request)
     {
         $validated = $request->validate([
@@ -43,14 +40,12 @@ class ContactController extends Controller
         return response()->json($contact, 201);
     }
 
-    // Display the specified contact
     public function show($id)
     {
         $contact = Contact::findOrFail($id);
         return response()->json($contact);
     }
 
-    // Update the specified contact in storage
     public function update(Request $request, $id)
     {
         $contact = Contact::findOrFail($id);
@@ -79,7 +74,6 @@ class ContactController extends Controller
         return response()->json($contact);
     }
 
-    // Remove the specified contact from storage
     public function destroy($id)
     {
         $contact = Contact::findOrFail($id);
