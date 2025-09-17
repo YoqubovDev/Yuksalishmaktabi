@@ -64,13 +64,16 @@ final class MoonShineLayout extends AppLayout
                 MenuItem::make('Admins', MoonShineUserResource::class),
                 MenuItem::make('Roles', MoonShineUserRoleResource::class),
             ]),
-            
+
+            MenuGroup::make('O\'qituvchi', [
+                MenuItem::make('TeacherResource', TeacherResource::class)
+            ]),
+
             MenuItem::make('GroupResource',GroupResource::class),
             MenuItem::make('HomeSliderResource', HomeSliderResource::class),
             MenuItem::make('PhotoCardResource', PhotoCardResource::class),
             MenuItem::make('QabulrasmiResource', QabulrasmiResource::class),
             MenuItem::make('SliderResource',SliderResource::class),
-            MenuItem::make('TeacherResource', TeacherResource::class),
             MenuItem::make('VideoResource', VideoResource::class),
             MenuItem::make('UserResource', UserResource::class),
             MenuItem::make('Contacts', ContactResource::class),
