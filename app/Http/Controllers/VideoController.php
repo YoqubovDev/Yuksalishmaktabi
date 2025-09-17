@@ -12,7 +12,7 @@ class VideoController extends Controller
     {
         $videos = Video::latest()->get();
 
-        return view('news.index', compact('videos'));
+        return view('videos.index', compact('videos'));
     }
 
     // Yangi video qo‘shish

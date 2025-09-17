@@ -6,6 +6,8 @@ use App\Http\Controllers\PhotocardController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\TeacherController;
 use App\Http\Controllers\VideoController;
+use App\Http\Controllers\ContactController;
+
 use Illuminate\Support\Facades\Route;
 
 Route::get('/about', [SliderController::class, 'index'])->name('about');
