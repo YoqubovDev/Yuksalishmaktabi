@@ -14,6 +14,8 @@ Route::get('/', [HomeSliderController::class,'index'])->name('home');
 Route::get('/dars', [GroupController::class, 'index'])->name('subject');
 Route::get('/photo', [VideoController::class, 'index'])->name('photo');
 Route::get('/yutuqlar', [PhotocardController::class, 'index'])->name('achievements');
+Route::get('/news', [NewsController::class, 'index'])->name('news');
+
 
 Route::get('/aloqa', function () {
     return view('aloqa');
