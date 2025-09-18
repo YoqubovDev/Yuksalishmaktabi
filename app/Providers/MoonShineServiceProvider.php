@@ -20,6 +20,8 @@ use App\MoonShine\Resources\HomeSliderResource;
 use App\MoonShine\Resources\QabulrasmiResource;
 use App\MoonShine\Resources\UserResource;
 use App\MoonShine\Resources\ContactResource;
+use App\MoonShine\Resources\DepartmentsResource;
+
 
 class MoonShineServiceProvider extends ServiceProvider
 {
@@ -45,6 +47,7 @@ class MoonShineServiceProvider extends ServiceProvider
                 QabulrasmiResource::class,
                 UserResource::class,
                 ContactResource::class,
+                DepartmentsResource::class, 
             ])
             ->pages([
                 ...$config->getPages(),
