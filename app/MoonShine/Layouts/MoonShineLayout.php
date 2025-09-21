@@ -46,6 +46,7 @@ use MoonShine\UI\Components\{Breadcrumbs,
     use App\MoonShine\Resources\UserResource;
     use App\MoonShine\Resources\ContactResource;
     use App\MoonShine\Resources\DepartmentsResource;
+    use App\MoonShine\Resources\CourseResource;
 
 
 
@@ -67,13 +68,20 @@ final class MoonShineLayout extends AppLayout
                 MenuItem::make('Roles', MoonShineUserRoleResource::class),
             ]),
 
-            MenuGroup::make('O\'qituvchi', [
+            MenuGroup::make('O\'qituvchlar', [
                 MenuItem::make('Teacher', TeacherResource::class),
                 MenuItem::make('Departments', DepartmentsResource::class),
 
             ]),
 
-            MenuItem::make('GroupResource',GroupResource::class),
+            MenuGroup::make('Groups', [
+                MenuItem::make('Create new Group', GroupResource::class),
+                MenuItem::make('Course', CourseResource::class),
+
+
+            ]),
+            
+
             MenuItem::make('HomeSliderResource', HomeSliderResource::class),
             MenuItem::make('PhotoCardResource', PhotoCardResource::class),
             MenuItem::make('QabulrasmiResource', QabulrasmiResource::class),
