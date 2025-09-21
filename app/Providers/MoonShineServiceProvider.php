@@ -21,6 +21,7 @@ use App\MoonShine\Resources\QabulrasmiResource;
 use App\MoonShine\Resources\UserResource;
 use App\MoonShine\Resources\ContactResource;
 use App\MoonShine\Resources\DepartmentsResource;
+use App\MoonShine\Resources\CourseResource;
 
 
 class MoonShineServiceProvider extends ServiceProvider
@@ -48,6 +49,7 @@ class MoonShineServiceProvider extends ServiceProvider
                 UserResource::class,
                 ContactResource::class,
                 DepartmentsResource::class, 
+                CourseResource::class,
             ])
             ->pages([
                 ...$config->getPages(),
