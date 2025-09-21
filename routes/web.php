@@ -7,6 +7,8 @@ use App\Http\Controllers\SliderController;
 use App\Http\Controllers\TeacherController;
 use App\Http\Controllers\VideoController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\DepartmentsController;
+
 
 use Illuminate\Support\Facades\Route;
 

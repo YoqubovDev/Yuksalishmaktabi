@@ -326,76 +326,19 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Bo‘lim 1 -->
-                <div class="bg-gray-50 rounded-xl p-6 shadow-md transition-all duration-300 hover:shadow-lg">
-                    <div class="w-16 h-16 bg-blue-900 text-white rounded-full flex items-center justify-center mb-4 mx-auto">
-                        <i class="fas fa-flask text-2xl"></i>
+                @foreach($departments as $department)
+                    <div class="bg-gray-50 rounded-xl p-6 shadow-md transition-all duration-300 hover:shadow-lg">
+                        <div class="w-16 h-16 bg-blue-900 text-white rounded-full flex items-center justify-center mb-4 mx-auto">
+                            <i class="{{ $department->icon }}"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-center text-blue-900 mb-3">{{ $department->name }}</h3>
+                        <p class="text-gray-600 text-center mb-4">{{ $department->description }}</p>
+                        <div class="text-center">
+                            <span class="text-blue-600 font-medium">{{ $department->teachers_count }} nafar o‘qituvchi</span>
+                        </div>
                     </div>
-                    <h3 class="text-xl font-bold text-center text-blue-900 mb-3">Tabiiy fanlar bo‘limi</h3>
-                    <p class="text-gray-600 text-center mb-4">Tabiiy fanlar bo‘limida Fizika, Kimyo va Biologiya bo‘yicha zamonaviy laboratoriyalar va keng qamrovli dasturlar taqdim etiladi.</p>
-                    <div class="text-center">
-                        <span class="text-blue-600 font-medium">8 nafar o‘qituvchi</span>
-                    </div>
-                </div>
-
-                <!-- Bo‘lim 2 -->
-                <div class="bg-gray-50 rounded-xl p-6 shadow-md transition-all duration-300 hover:shadow-lg">
-                    <div class="w-16 h-16 bg-blue-900 text-white rounded-full flex items-center justify-center mb-4 mx-auto">
-                        <i class="fas fa-calculator text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-center text-blue-900 mb-3">Matematika bo‘limi</h3>
-                    <p class="text-gray-600 text-center mb-4">Matematika bo‘limi talabalarni mantiqiy fikrlash va muammolarni yechish ko‘nikmalari bilan ta’minlaydi.</p>
-                    <div class="text-center">
-                        <span class="text-blue-600 font-medium">10 nafar o‘qituvchi</span>
-                    </div>
-                </div>
-
-                <!-- Bo‘lim 3 -->
-                <div class="bg-gray-50 rounded-xl p-6 shadow-md transition-all duration-300 hover:shadow-lg">
-                    <div class="w-16 h-16 bg-blue-900 text-white rounded-full flex items-center justify-center mb-4 mx-auto">
-                        <i class="fas fa-language text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-center text-blue-900 mb-3">Chet tillari bo‘limi</h3>
-                    <p class="text-gray-600 text-center mb-4">Chet tillari bo‘limida Ingliz, Rus va boshqa xorijiy tillar o‘qitiladi, talabalar global maydonga tayyorlanadi.</p>
-                    <div class="text-center">
-                        <span class="text-blue-600 font-medium">12 nafar o‘qituvchi</span>
-                    </div>
-                </div>
-
-                <!-- Bo‘lim 4 -->
-                <div class="bg-gray-50 rounded-xl p-6 shadow-md transition-all duration-300 hover:shadow-lg">
-                    <div class="w-16 h-16 bg-blue-900 text-white rounded-full flex items-center justify-center mb-4 mx-auto">
-                        <i class="fas fa-book text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-center text-blue-900 mb-3">Gumanitar fanlar bo‘limi</h3>
-                    <p class="text-gray-600 text-center mb-4">Gumanitar fanlar bo‘limida Tarix, Adabiyot, Falsafa va Ijtimoiy fanlar bo‘yicha tanqidiy fikrlash rivojlantiriladi.</p>
-                    <div class="text-center">
-                        <span class="text-blue-600 font-medium">7 nafar o‘qituvchi</span>
-                    </div>
-                </div>
-
-                <!-- Bo‘lim 5 -->
-                <div class="bg-gray-50 rounded-xl p-6 shadow-md transition-all duration-300 hover:shadow-lg">
-                    <div class="w-16 h-16 bg-blue-900 text-white rounded-full flex items-center justify-center mb-4 mx-auto">
-                        <i class="fas fa-laptop-code text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-center text-blue-900 mb-3">Texnika bo‘limi</h3>
-                    <p class="text-gray-600 text-center mb-4">Texnika bo‘limi mexanik, elektr va qurilish muhandisligi asoslarini ta’lim beradi.</p>
-                    <div class="text-center">
-                        <span class="text-blue-600 font-medium">6 nafar o‘qituvchi</span>
-                    </div>
-                </div>
-
-                <!-- Bo‘lim 6 -->
-                <div class="bg-gray-50 rounded-xl p-6 shadow-md transition-all duration-300 hover:shadow-lg">
-                    <div class="w-16 h-16 bg-blue-900 text-white rounded-full flex items-center justify-center mb-4 mx-auto">
-                        <i class="fas fa-palette text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-center text-blue-900 mb-3">San’at bo‘limi</h3>
-                    <p class="text-gray-600 text-center mb-4">San’at bo‘limida musiqiy, tasviriy va ijodiy san’at yo‘nalishlari bo‘yicha keng ko‘lamli ta’lim beriladi.</p>
-                    <div class="text-center">
-                        <span class="text-blue-600 font-medium">5 nafar o‘qituvchi</span>
-                    </div>
-                </div>
+                @endforeach
+                
             </div>
         </div>
     </section>
