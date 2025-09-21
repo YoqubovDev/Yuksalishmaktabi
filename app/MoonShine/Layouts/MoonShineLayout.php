@@ -45,6 +45,8 @@ use MoonShine\UI\Components\{Breadcrumbs,
     use App\MoonShine\Resources\VideoResource;
     use App\MoonShine\Resources\UserResource;
     use App\MoonShine\Resources\ContactResource;
+    use App\MoonShine\Resources\DepartmentsResource;
+
 
 
 
@@ -66,7 +68,9 @@ final class MoonShineLayout extends AppLayout
             ]),
 
             MenuGroup::make('O\'qituvchi', [
-                MenuItem::make('TeacherResource', TeacherResource::class)
+                MenuItem::make('Teacher', TeacherResource::class),
+                MenuItem::make('Departments', DepartmentsResource::class),
+
             ]),
 
             MenuItem::make('GroupResource',GroupResource::class),
