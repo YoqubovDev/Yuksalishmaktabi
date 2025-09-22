@@ -621,6 +621,111 @@
                             </button>
                         </div>
                     </div>
+                    <!-- Course Card 7 -->
+                    @foreach($courses as $course)
+                        <div class="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover-lift">
+                            <div class="p-6">
+                                <div
+                                    class="w-12 h-12 bg-violet-500/10 text-violet-500 rounded-lg flex items-center justify-center mb-4">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="{{ $course->icon }}">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-semibold mb-2">{{ $course->title }}</h3>
+                                <p class="text-gray-600 mb-4">{{ $course->description }}</p>
+                                <div class="flex items-center justify-between text-sm text-gray-600 mb-4">
+                                    <div class="flex items-center gap-1">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        </svg>
+                                        {{ $course->duration }} yil
+                                    </div>
+                                    <div class="flex items-center gap-1">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z">
+                                            </path>
+                                        </svg>
+                                        {{ $course->student_count }} talaba
+                                    </div>
+                                </div>
+                                <button class="w-full border border-gray-300 text-gray-700 hover:bg-gray-50 px-4 py-2 rounded-lg transition-colors">
+                                    Batafsil ma'lumot
+                                </button>
+                            </div>
+                        </div>
+                        <!-- MODAL -->
+                        <div id="group-modal-{{ $group->id }}"
+                            class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+                            <div class="bg-white rounded-xl shadow-xl w-full max-w-6xl max-h-screen overflow-auto p-6">
+                                <div class="flex justify-between items-center mb-6">
+                                    <h2 class="text-2xl font-bold text-blue-800">Group {{ $group->name }} - Tafsilotlar </h2>
+                                    <button onclick="closeModal({{ $group->id }})" class="text-gray-500 hover:text-gray-800">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                            stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M6 18L18 6M6 6l12 12" />
+                                        </svg>
+                                    </button>
+                                </div>
+
+                                <!-- TABS -->
+                                <div class="border-b border-gray-200 mb-6">
+                                    <ul class="flex flex-wrap -mb-px text-sm font-medium text-center">
+                                        <li class="mr-2">
+                                            <a href="#"
+                                                class="tab-link active inline-block p-4 border-b-2 border-blue-600 rounded-t-lg text-blue-600"
+                                                data-tab="schedule-{{ $group->id }}">
+                                                Dars Jadvali
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="tab-link inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300"
+                                                data-tab="results-{{ $course->id }}">
+                                                Natija
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- Tab Contents -->
+                                <div id="schedule-{{ $course->id }}" class="tab-content">
+                                    <h3 class="text-xl font-semibold mb-4 text-blue-700">Batafsil mal'umot</h3>
+                                    <div class="bg-gray-50 rounded-lg p-4 overflow-x-auto">
+                                        <div class="w-full h-auto rounded shadow-sm">
+                                            <p> {{ $course->desciription}}</p>
+                                        </div>
+                                        <img src="{{ asset('storage/' . $group->image) }}" alt="Weekly Schedule"
+                                            class="w-full h-auto rounded shadow-sm">
+                                        <p class="text-sm text-gray-600 mt-2 text-center">{{ $course->name }}
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div id="results-{{ $group->id }}" class="tab-content hidden">
+                                    <h3 class="text-xl font-semibold mb-4 text-blue-700">Baholash Natijalari</h3>
+                                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                                        <div class="bg-white p-6 rounded-lg shadow-md">
+                                            <h4 class="text-lg font-medium mb-4 text-blue-800 border-b pb-2">Qabul Qilish Natijalari
+                                            </h4>
+                                            <div class="h-64 bg-gray-100 rounded flex items-center justify-center">
+                                                <div class="text-center">
+                                                    <div class="text-gray-500 mb-2">Guruh Natijalari</div>
+                                                    <div class="text-2xl font-bold text-blue-700">Imtihonlar Bo'yicha:
+                                                        {{ $group->result_percentage }}%</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+
                 </div>
             </div>
         </section>
