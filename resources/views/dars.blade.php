@@ -401,227 +401,8 @@
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
                     <!-- Course Card 1 -->
-                    <div class="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover-lift">
-                        <div class="p-6">
-                            <div
-                                class="w-12 h-12 bg-cyan-600/10 text-cyan-600 rounded-lg flex items-center justify-center mb-4">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253">
-                                    </path>
-                                </svg>
-                            </div>
-                            <h3 class="text-xl font-semibold mb-2">Tabiiy fanlar</h3>
-                            <p class="text-gray-600 mb-4">Matematika, Fizika, Kimyo, Biologiya</p>
-                            <div class="flex items-center justify-between text-sm text-gray-600 mb-4">
-                                <div class="flex items-center gap-1">
-                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                    </svg>
-                                    2 yil
-                                </div>
-                                <div class="flex items-center gap-1">
-                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z">
-                                        </path>
-                                    </svg>
-                                    120 talaba
-                                </div>
-                            </div>
-                            <button
-                                class="w-full border border-gray-300 text-gray-700 hover:bg-gray-50 px-4 py-2 rounded-lg transition-colors">
-                                Batafsil ma'lumot
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Course Card 2 -->
-                    <div class="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover-lift">
-                        <div class="p-6">
-                            <div
-                                class="w-12 h-12 bg-violet-500/10 text-violet-500 rounded-lg flex items-center justify-center mb-4">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z">
-                                    </path>
-                                </svg>
-                            </div>
-                            <h3 class="text-xl font-semibold mb-2">Muhandislik</h3>
-                            <p class="text-gray-600 mb-4">Texnik fanlar va amaliy muhandislik</p>
-                            <div class="flex items-center justify-between text-sm text-gray-600 mb-4">
-                                <div class="flex items-center gap-1">
-                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                    </svg>
-                                    2 yil
-                                </div>
-                                <div class="flex items-center gap-1">
-                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z">
-                                        </path>
-                                    </svg>
-                                    80 talaba
-                                </div>
-                            </div>
-                            <button
-                                class="w-full border border-gray-300 text-gray-700 hover:bg-gray-50 px-4 py-2 rounded-lg transition-colors">
-                                Batafsil ma'lumot
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Course Card 3 -->
-                    <div class="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover-lift">
-                        <div class="p-6">
-                            <div
-                                class="w-12 h-12 bg-cyan-600/10 text-cyan-600 rounded-lg flex items-center justify-center mb-4">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
-                                </svg>
-                            </div>
-                            <h3 class="text-xl font-semibold mb-2">Iqtisodiyot</h3>
-                            <p class="text-gray-600 mb-4">Biznes va iqtisodiy fanlar</p>
-                            <div class="flex items-center justify-between text-sm text-gray-600 mb-4">
-                                <div class="flex items-center gap-1">
-                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                    </svg>
-                                    2 yil
-                                </div>
-                                <div class="flex items-center gap-1">
-                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z">
-                                        </path>
-                                    </svg>
-                                    90 talaba
-                                </div>
-                            </div>
-                            <button
-                                class="w-full border border-gray-300 text-gray-700 hover:bg-gray-50 px-4 py-2 rounded-lg transition-colors">
-                                Batafsil ma'lumot
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Course Card 4 -->
-                    <div class="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover-lift">
-                        <div class="p-6">
-                            <div
-                                class="w-12 h-12 bg-violet-500/10 text-violet-500 rounded-lg flex items-center justify-center mb-4">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
-                                    </path>
-                                </svg>
-                            </div>
-                            <h3 class="text-xl font-semibold mb-2">Chet tillari</h3>
-                            <p class="text-gray-600 mb-4">Ingliz, Italyan, Rus tillari</p>
-                            <div class="flex items-center justify-between text-sm text-gray-600 mb-4">
-                                <div class="flex items-center gap-1">
-                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                    </svg>
-                                    2 yil
-                                </div>
-                                <div class="flex items-center gap-1">
-                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z">
-                                        </path>
-                                    </svg>
-                                    150 talaba
-                                </div>
-                            </div>
-                            <button
-                                class="w-full border border-gray-300 text-gray-700 hover:bg-gray-50 px-4 py-2 rounded-lg transition-colors">
-                                Batafsil ma'lumot
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Course Card 5 -->
-                    <div class="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover-lift">
-                        <div class="p-6">
-                            <div
-                                class="w-12 h-12 bg-cyan-600/10 text-cyan-600 rounded-lg flex items-center justify-center mb-4">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z">
-                                    </path>
-                                </svg>
-                            </div>
-                            <h3 class="text-xl font-semibold mb-2">IT va Dasturlash</h3>
-                            <p class="text-gray-600 mb-4">Zamonaviy IT texnologiyalari</p>
-                            <div class="flex items-center justify-between text-sm text-gray-600 mb-4">
-                                <div class="flex items-center gap-1">
-                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                    </svg>
-                                    2 yil
-                                </div>
-                                <div class="flex items-center gap-1">
-                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z">
-                                        </path>
-                                    </svg>
-                                    100 talaba
-                                </div>
-                            </div>
-                            <button
-                                class="w-full border border-gray-300 text-gray-700 hover:bg-gray-50 px-4 py-2 rounded-lg transition-colors">
-                                Batafsil ma'lumot
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Course Card 6 -->
-                    <div class="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover-lift">
-                        <div class="p-6">
-                            <div
-                                class="w-12 h-12 bg-violet-500/10 text-violet-500 rounded-lg flex items-center justify-center mb-4">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-.69l1.519-4.674z">
-                                    </path>
-                                </svg>
-                            </div>
-                            <h3 class="text-xl font-semibold mb-2">San'at va dizayn</h3>
-                            <p class="text-gray-600 mb-4">Ijodiy yo'nalishlar va dizayn</p>
-                            <div class="flex items-center justify-between text-sm text-gray-600 mb-4">
-                                <div class="flex items-center gap-1">
-                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                    </svg>
-                                    2 yil
-                                </div>
-                                <div class="flex items-center gap-1">
-                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z">
-                                        </path>
-                                    </svg>
-                                    60 talaba
-                                </div>
-                            </div>
-                            <button
-                                class="w-full border border-gray-300 text-gray-700 hover:bg-gray-50 px-4 py-2 rounded-lg transition-colors">
-                                Batafsil ma'lumot
-                            </button>
-                        </div>
-                    </div>
-                    <!-- Course Card 7 -->
                     @foreach($courses as $course)
                         <div class="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover-lift">
                             <div class="p-6">
@@ -652,18 +433,19 @@
                                         {{ $course->student_count }} talaba
                                     </div>
                                 </div>
-                                <button class="w-full border border-gray-300 text-gray-700 hover:bg-gray-50 px-4 py-2 rounded-lg transition-colors">
+                                <button onclick="openModal({{ $course->id }})"
+                                 class="w-full border border-gray-300 text-gray-700 hover:bg-gray-50 px-4 py-2 rounded-lg transition-colors">
                                     Batafsil ma'lumot
                                 </button>
                             </div>
                         </div>
                         <!-- MODAL -->
-                        <div id="group-modal-{{ $group->id }}"
+                        <div id="group-modal-{{ $course->id }}"
                             class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
                             <div class="bg-white rounded-xl shadow-xl w-full max-w-6xl max-h-screen overflow-auto p-6">
                                 <div class="flex justify-between items-center mb-6">
-                                    <h2 class="text-2xl font-bold text-blue-800">Group {{ $group->name }} - Tafsilotlar </h2>
-                                    <button onclick="closeModal({{ $group->id }})" class="text-gray-500 hover:text-gray-800">
+                                    <h2 class="text-2xl font-bold text-blue-800">Kursh {{ $course->name }} - Tafsilotlar </h2>
+                                    <button onclick="closeModal({{ $course->id }})" class="text-gray-500 hover:text-gray-800">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                                             stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -706,7 +488,7 @@
                                     </div>
                                 </div>
 
-                                <div id="results-{{ $group->id }}" class="tab-content hidden">
+                                <div id="results-{{ $course->id }}" class="tab-content hidden">
                                     <h3 class="text-xl font-semibold mb-4 text-blue-700">Baholash Natijalari</h3>
                                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                                         <div class="bg-white p-6 rounded-lg shadow-md">
@@ -716,7 +498,7 @@
                                                 <div class="text-center">
                                                     <div class="text-gray-500 mb-2">Guruh Natijalari</div>
                                                     <div class="text-2xl font-bold text-blue-700">Imtihonlar Bo'yicha:
-                                                        {{ $group->result_percentage }}%</div>
+                                                        </div>
                                                 </div>
                                             </div>
                                         </div>
