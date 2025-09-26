@@ -5,6 +5,8 @@ declare(strict_types=1);
 namespace App\MoonShine\Resources;
 
 use App\Models\Video;
+use MoonShine\Laravel\Fields\Relationships\BelongsTo;
+use MoonShine\Laravel\Fields\Relationships\BelongsToMany;
 use MoonShine\Laravel\Resources\ModelResource;
 use MoonShine\UI\Fields\Date;
 use MoonShine\UI\Fields\ID;
@@ -24,6 +26,11 @@ class VideoResource extends ModelResource
         return [
             ID::make()->sortable(),
             Text::make('Sarlavha', 'title'),
+            BelongsTo::make(
+                'Category ID and Name',
+                'course',
+                fn($item)=>"$item->name",
+                CourseResource::class)->nullable(),
             Text::make('YouTube URL', 'url'),
             Date::make('Sana', 'published_at'),
         ];
@@ -34,6 +41,11 @@ class VideoResource extends ModelResource
         return [
             Box::make([
                 Text::make('Sarlavha', 'title')->required(),
+                BelongsTo::make(
+                'Category ID and Name',
+                'course',
+                fn($item)=>"$item->name",
+                CourseResource::class)->nullable(),
                 Text::make('YouTube URL', 'url')->required(),
                 Date::make('Sana', 'published_at'),
             ]),
@@ -45,6 +57,11 @@ class VideoResource extends ModelResource
         return [
             ID::make(),
             Text::make('Sarlavha', 'title'),
+            BelongsTo::make(
+                'Category ID and Name',
+                'course',
+                fn($item)=>"$item->name",
+                CourseResource::class)->nullable(),
             Text::make('YouTube URL', 'url'),
             Date::make('Sana', 'published_at'),
         ];

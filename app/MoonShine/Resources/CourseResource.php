@@ -16,6 +16,7 @@ use MoonShine\UI\Fields\Number;
 use MoonShine\UI\Fields\Select;
 use MoonShine\Contracts\UI\FieldContract;
 use MoonShine\Contracts\UI\ComponentContract;
+use MoonShine\Laravel\Fields\Relationships\HasMany;
 
 
 class CourseResource extends ModelResource
@@ -33,6 +34,7 @@ class CourseResource extends ModelResource
             Text::make('Subjects', 'subjects'),
             Number::make('Student Count', 'student_count'),
             Text::make('Duration', 'duration'),
+            Text::make('YouTube URL', 'url'),
         ];
     }
 
@@ -41,10 +43,14 @@ class CourseResource extends ModelResource
         return [
             Box::make([
                 ID::make(),
-                Text::make('Kurs nomi', 'title')->required(),
-                Textarea::make('Tavsif', 'description')->required(),
-                Text::make('Fanlar', 'subjects'),
-                Select::make('Ikonka class', 'icon') // <-- O'zgartirildi!
+                Text::make('Kurs nomi', 'title')
+                    ->placeholder('Masalan: Chet tillari')
+                        ->required(),
+                Textarea::make('Tavsif', 'description')
+                    ->required(),
+                Text::make('Fanlar', 'subjects')
+                    ->placeholder('Masalan: Ingliz, Italyan, Rus tillari'),
+                Select::make('Ikonka class', 'icon')
                 ->options([
                     'M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253' => 'Tabiiy fanlar (flask)',
                     'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z' => 'Muhandislik',
@@ -57,9 +63,9 @@ class CourseResource extends ModelResource
                 ])
                 ->nullable()
                 ->searchable(), // Ko'p ikonka bo'lsa qulay
-                Text::make('Davomiyligi', 'duration')->default('2 yil'),
+                Text::make('Davomiyligi', 'duration'),
                 Number::make('Talabalar soni', 'student_count')->min(0),
-                Text::make('Karta rangi', 'color'),
+                
             ])
         ];
     }
@@ -75,7 +81,7 @@ class CourseResource extends ModelResource
             Text::make('Ikonka', 'icon'),
             Text::make('Davomiyligi', 'duration'),
             Number::make('Talabalar soni', 'student_count'),
-            Text::make('Karta rangi', 'color'),
+            HasMany::make('Videolar', 'videos', resource: VideoResource::class),
         ];
     }
 

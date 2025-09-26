@@ -13,6 +13,7 @@ return new class extends Migration
             $table->string('title');            // Video sarlavhasi
             $table->string('url', 500);         // YouTube URL
             $table->date('published_at')->nullable(); // Sana
+            $table->foreignId('course_id')->constrained()->cascadeOnDelete();
             $table->timestamps();               // created_at va updated_at
         });
     }

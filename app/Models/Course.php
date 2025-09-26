@@ -15,4 +15,9 @@ class Course extends Model
         'student_count',
         'color',
     ];
+
+    public function videos()
+    {
+        return $this->hasMany(Video::class);
+    }
 }

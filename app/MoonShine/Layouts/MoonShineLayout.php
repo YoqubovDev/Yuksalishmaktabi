@@ -82,7 +82,7 @@ final class MoonShineLayout extends AppLayout
             ]),
             
 
-            MenuItem::make('HomeSliderResource', HomeSliderResource::class),
+            MenuItem::make('Maktab Rahbariyat', HomeSliderResource::class),
             MenuItem::make('PhotoCardResource', PhotoCardResource::class),
             MenuItem::make('QabulrasmiResource', QabulrasmiResource::class),
             MenuItem::make('SliderResource',SliderResource::class),
