@@ -264,7 +264,7 @@
                     <ul>
                         <li><a href="{{route('home')}}">Home</a></li>
                         <li><a href="{{route('about')}}">Litsey haqida</a></li>
-                        <li><a href="{{route('photo')}}">Yangiliklar</a></li>
+                        <!-- <li><a href="{{route('photo')}}">Yangiliklar</a></li> -->
                         <li><a href="{{route('teachers')}}">O'qituvchilar</a></li>
                         <li><a href="{{route('subject')}}">Dars jarayonlari</a></li>
                         <li><a href="{{route('achievements')}}">Yutuqlar</a></li>
@@ -300,7 +300,7 @@
 
     <!-- Main Content -->
     <main class="container mx-auto p-4">
-        <h2 class="text-3xl font-bold mb-8 text-blue-800 text-center">Akademik Guruhlar</h2>
+        <h2 class="text-3xl font-bold mb-8 text-blue-800 text-center">Yuksalish maktabi Guruhlar</h2>
 
         <!-- GROUP CARDS -->
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
@@ -488,7 +488,6 @@
                             </div>
 
                             <div id="results-{{ $course->id }}" class="tab-content hidden">
-                                <h3 class="text-xl font-semibold mb-4 text-blue-700">Baholash Natijalari</h3>
                                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                                     <div class="bg-white p-6 rounded-lg shadow-md">
                                         <div class="h-64 bg-gray-100 rounded flex items-center justify-center">
@@ -559,8 +558,8 @@
                         </div>
                     </div>
                     <div>
-                        <div class="text-3xl font-serif font-bold text-white">TTPU</div>
-                        <div class="text-sm tracking-widest text-gray-300">Akademik Litsey</div>
+                        <div class="text-3xl font-serif font-bold text-white">JYM</div>
+                        <div class="text-sm tracking-widest text-gray-300">Yuksalish maktabi</div>
                     </div>
                 </div>
 
@@ -573,8 +572,8 @@
                         <div>
                             <div class="text-gray-400 text-xs">Telefon</div>
                             <a href="tel:+13125550123"
-                                class="text-white hover:text-unipix-light transition-colors duration-300">(+99871)
-                                246-23-31</a>
+                                class="text-white hover:text-unipix-light transition-colors duration-300">(+99891)
+                                0040785</a>
                         </div>
                     </div>
 
@@ -585,7 +584,7 @@
                         <div>
                             <div class="text-gray-400 text-xs">Email</div>
                             <a href="mailto:info@unipix.edu"
-                                class="text-white hover:text-unipix-light transition-colors duration-300">info@turinal.uz</a>
+                                class="text-white hover:text-unipix-light transition-colors duration-300">xiyobidasturchi0011@gmail.com</a>
                         </div>
                     </div>
                 </div>
@@ -598,7 +597,7 @@
             <div>
                 <h3 class="text-xl font-bold mb-6 relative">
                     <span class="bg-unipix-light h-1 w-8 absolute -bottom-2 left-0"></span>
-                    Litsey haqida
+                    Maktab haqida
                 </h3>
                 <p class="text-gray-300 mb-6 leading-relaxed">
                     Turin akademik litseyi O'zbekiston va Italiya hamkorligidagi nufuzli ta'lim muassasasi bo'lib,

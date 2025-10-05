@@ -14,8 +14,8 @@ use MoonShine\Contracts\UI\FieldContract;
 use MoonShine\Contracts\UI\ComponentContract;
 use MoonShine\UI\Fields\Text;
 use MoonShine\UI\Fields\Phone;
-use MoonShine\UI\Fields\Date;
 use MoonShine\UI\Fields\Number;
+use MoonShine\UI\Fields\Date;
 
 class ContactResource extends ModelResource
 {
@@ -34,10 +34,14 @@ class ContactResource extends ModelResource
             Phone::make('Phone', 'phone'),
             Phone::make('Fax', 'fax'),
             Text::make('Email', 'email'),
-            Date::make('Work time', 'work_time'),
-            Date::make('Lunch time', 'lunch_time'),
+
+            Date::make('Work start', 'work_time_start'),
+            Date::make('Work end', 'work_time_end'),
+            Date::make('Lunch start', 'lunch_time_start'),
+            Date::make('Lunch end', 'lunch_time_end'),
+
             Number::make('Bus', 'bus'),
-            Number::make('Mashrut','mashrut'),
+            Number::make('Mashrut','marshrut'),
             Text::make('Telegram', 'telegram'),
             Text::make('Facebook', 'facebook'),
             Text::make('Youtube', 'youtube'),
@@ -57,11 +61,11 @@ class ContactResource extends ModelResource
                 Phone::make('Phone', 'phone'),
                 Phone::make('Fax', 'fax'),
                 Text::make('Email', 'email'),
-                Text::make('Work time', 'work_time')
-                    ->placeholder('Masalan: 09:00 - 18:00'),
 
-                Text::make('Lunch time', 'lunch_time')
-                    ->placeholder('Masalan: 13:00 - 14:00'),
+                Date::make('Work start', 'work_time_start'),
+                Date::make('Work end', 'work_time_end'),
+                Date::make('Lunch start', 'lunch_time_start'),
+                Date::make('Lunch end', 'lunch_time_end'),
 
                 Number::make('Bus', 'bus'),
                 Number::make('Mashrut','marshrut'),
@@ -69,7 +73,6 @@ class ContactResource extends ModelResource
                 Text::make('Facebook', 'facebook'),
                 Text::make('Youtube', 'youtube'),
                 Text::make('Instagram', 'instagram'),
-
             ])
         ];
     }
@@ -85,26 +88,26 @@ class ContactResource extends ModelResource
             Phone::make('Phone', 'phone'),
             Phone::make('Fax', 'fax'),
             Text::make('Email', 'email'),
-            Text::make('Work time', 'work_time'),
-            Text::make('Lunch time', 'lunch_time'),
+
+            Date::make('Work start', 'work_time_start'),
+            Date::make('Work end', 'work_time_end'),
+            Date::make('Lunch start', 'lunch_time_start'),
+            Date::make('Lunch end', 'lunch_time_end'),
+
             Number::make('Bus', 'bus'),
-            Number::make('Mashrut','mashrut'),
+            Number::make('Mashrut','marshrut'),
             Text::make('Telegram', 'telegram'),
             Text::make('Facebook', 'facebook'),
             Text::make('Youtube', 'youtube'),
             Text::make('Instagram', 'instagram'),
-
         ];
     }
 
-    /**
-     * @param Contact $item
-     *
-     * @return array<string, string[]|string>
-     * @see https://laravel.com/docs/validation#available-validation-rules
-     */
     protected function rules(mixed $item): array
     {
-        return [];
+        return [
+            'email' => ['nullable','email'],
+            'phone' => ['nullable','string','max:20'],
+        ];
     }
 }

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Turin Akademik Litsey</title>
+  <title> Jizzax Shahar Yuksalish maktabi</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
@@ -517,13 +517,13 @@
           <div class="header-content">
               <div class="logo">
                   <img src="/image/turin-al-logo.png" alt="turin-al-logo.png">
-                  <div class="logo-text">ACADEMIC LYCEUM</div>
+                  <div class="logo-text">YUKSALISH MAKTABI</div>
               </div>
               <nav>
                   <ul>
                       <li><a href="{{route('home')}}">Home</a></li>
-                      <li><a href="{{route('about')}}">Litsey haqida</a></li>
-                      <li><a href="{{route('photo')}}">Yangiliklar</a></li>
+                      <li><a href="{{route('about')}}">Maktab haqida</a></li>
+                      <!-- <li><a href="{{route('photo')}}">Yangiliklar</a></li> -->
                       <li><a href="{{route('teachers')}}">O'qituvchilar</a></li>
                       <li><a href="{{route('subject')}}">Dars jarayonlari</a></li>
                       <li><a href="{{route('achievements')}}">Yutuqlar</a></li>
@@ -550,7 +550,7 @@
             <span class="mr-2"><i class="fas fa-graduation-cap"></i></span>
               bilim innovatsiyaga yo‘li
           </p>
-            <h3 class="text-5xl md:text-6xl font-serif mb-10 text-center hero-text-shadow">TURIN litseyi bilan</h3>
+            <h3 class="text-5xl md:text-6xl font-serif mb-10 text-center hero-text-shadow">Jizzax Shahar Yuksalish maktabi bilan</h3>
             <h2 class="text-6xl md:text-7xl font-serif mb-4 text-center hero-text-shadow font-bold">Kelajagingni kashf et</h2>
           <p class="text-lg max-w-2xl text-center mb-12 font-light">Zehinlilarni tarbiyalaymiz, yetakchilarni voyaga yetkazamiz. Bugunoq jonli va faol akademik hamjamiyatimizga qo‘shiling.</p>
         </div>
@@ -647,18 +647,18 @@
       <div class="bg-white rounded-lg shadow-lg p-8">
         <h2 class="text-4xl font-bold text-unipix-blue text-center mb-8">Biz Haqimizda</h2>
         <p class="text-gray-600 text-lg mb-6">
-            Turin Akademik Litseyi ta'lim, innovatsiya va rivojlanish markazi. Bizning asosiy maqsadimiz nafaqat talabalarga bilim berish, balki ularni kelajakdagi muvaffaqiyatli hayotga tayyorlashdir.
+            Yuksalish maktabi ta'lim, innovatsiya va rivojlanish markazi. Bizning asosiy maqsadimiz nafaqat talabalarga bilim berish, balki ularni kelajakdagi muvaffaqiyatli hayotga tayyorlashdir.
         </p>
         <h3 class="text-2xl font-semibold text-unipix-blue mb-4">Bizning Afzalliklarimiz</h3>
         <ul class="list-disc list-inside text-gray-600 mb-6 space-y-2">
-          <li><strong>Professional o'qituvchilar:</strong> Litseyimiz o'z sohalari bo'yicha yuqori malakaga ega bo'lgan tajribali pedagoglar.</li>
+          <li><strong>Professional o'qituvchilar:</strong>Maktabimiz o'z sohalari bo'yicha yuqori malakaga ega bo'lgan tajribali pedagoglar.</li>
           <li><strong>Innovatsion metodologiyalar:</strong> O'qitish zamonaviy texnologiyalar va interfaol ta'lim usullaridan foydalangan holda amalga oshiriladi.</li>
           <li><strong>Amaliy o'quv jarayoni:</strong> Haqiqiy loyihalar va amaliy mashg'ulotlar orqali nazariy bilimlarni mustahkamlash imkoniyati.</li>
           <li><strong>Global yondashuv:</strong> Talabalarga xalqaro standartlarga javob beradigan bilim va ko'nikmalar beriladi.</li>
         </ul>
         <h3 class="text-2xl font-semibold text-unipix-blue mb-4">Bizning Tariximiz</h3>
         <p class="text-gray-600 text-lg mb-6">
-            2010 yilda tashkil etilgan Toshkent shahridagi Turin Politexnika universiteti qoshidagi akademik litsey O'zbekiston yoshlariga sifatli ta'lim berish maqsadida tashkil etilgan. 450 nafar o'quvchiga mo'ljallangan litsey milliy ta'lim standartlariga asoslangan zamonaviy o'quv muhitini taklif etadi. U talabalarni fan, texnologiya, muhandislik, matematika va gumanitar fanlar bo'yicha qat'iy dasturlar orqali tayyorlaydi. Qabul ingliz tilidagi rasmiy intervyu bilan bir qatorda matematika, fizika va ingliz tilidagi test natijalariga asoslanadi. Litsey o'quvchilarni kuchli ilmiy asoslar va professional ustozlik orqali akademik maqsadlariga va kelajakdagi martabalariga erishishda g'urur bilan qo'llab-quvvatlaydi.
+            2023 yilda tashkil etilgan Jizzax shahridagi Yuksalish maktab O'zbekiston yoshlariga sifatli ta'lim berish maqsadida tashkil etilgan. 450 nafar o'quvchiga mo'ljallangan  maktabi milliy ta'lim standartlariga asoslangan zamonaviy o'quv muhitini taklif etadi. U talabalarni fan, texnologiya, muhandislik, matematika va gumanitar fanlar bo'yicha qat'iy dasturlar orqali tayyorlaydi. Qabul ingliz tilidagi rasmiy intervyu bilan bir qatorda matematika, fizika va ingliz tilidagi test natijalariga asoslanadi. Yuksalish maktabi o'quvchilarni kuchli ilmiy asoslar va professional ustozlik orqali akademik maqsadlariga va kelajakdagi martabalariga erishishda g'urur bilan qo'llab-quvvatlaydi.
         </p>
         <h3 class="text-2xl font-semibold text-unipix-blue mb-4">Bizning Missiyamiz</h3>
         <p class="text-gray-600 text-lg mb-6">
@@ -671,7 +671,7 @@
   <!-- Team Section -->
   <section class="py-16 bg-gray-50">
       <div class="container mx-auto px-4">
-          <h3 class="text-3xl font-bold text-blue-900 mb-10 text-center">Litsey Rahbariyati</h3>
+          <h3 class="text-3xl font-bold text-blue-900 mb-10 text-center">Yuksalish Maktab Rahbariyati</h3>
 
           <div class="swiper teacherSwiper">
               <div class="swiper-wrapper">
@@ -766,8 +766,8 @@
                       </div>
                   </div>
                   <div>
-                      <div class="text-3xl font-serif font-bold text-white">TTPU</div>
-                      <div class="text-sm tracking-widest text-gray-300">Akademik Litsey</div>
+                      <div class="text-3xl font-serif font-bold text-white">Yuksalish</div>
+                      <div class="text-sm tracking-widest text-gray-300">Yuksalish maktabi</div>
                   </div>
               </div>
 
@@ -802,10 +802,10 @@
           <div>
               <h3 class="text-xl font-bold mb-6 relative">
                   <span class="bg-unipix-light h-1 w-8 absolute -bottom-2 left-0"></span>
-                  Litsey haqida
+                  Yuksalish maktabi haqida
               </h3>
               <p class="text-gray-300 mb-6 leading-relaxed">
-                  Turin akademik litseyi O'zbekiston va Italiya hamkorligidagi nufuzli ta'lim muassasasi bo'lib, zamonaviy ta'lim va innovatsion yondashuvlarga asoslangan.
+                  Jizzax Yuksalish maktabi nufuzli ta'lim muassasasi bo'lib, zamonaviy ta'lim va innovatsion yondashuvlarga asoslangan.
               </p>
               <div class="flex space-x-3 mt-4">
                   <a href="#" class="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-unipix-light transition-colors duration-300">

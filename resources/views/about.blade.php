@@ -578,7 +578,7 @@
                     <ul>
                         <li><a href="{{route('home')}}">Home</a></li>
                         <li><a href="{{route('about')}}">Litsey haqida</a></li>
-                        <li><a href="{{route('photo')}}">Yangiliklar</a></li>
+                        <!-- <li><a href="{{route('photo')}}">Yangiliklar</a></li> -->
                         <li><a href="{{route('teachers')}}">O'qituvchilar</a></li>
                         <li><a href="{{route('subject')}}">Dars jarayonlari</a></li>
                         <li><a href="{{route('achievements')}}">Yutuqlar</a></li>
