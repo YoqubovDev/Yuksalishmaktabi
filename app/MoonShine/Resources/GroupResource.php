@@ -27,7 +27,7 @@ class GroupResource extends ModelResource
             Text::make('Yonalish' ,'direction')->required(),
             Text::make('Oquvchi soni' ,'schedule_image'),
             Number::make('Natija foizi', 'result_percentage')->nullable(),
-            Image::make('Rasm', 'image'),
+            Image::make(' Guruh Rasmi ', 'image'),
         ];
     }
 
@@ -39,7 +39,7 @@ class GroupResource extends ModelResource
             Text::make('Yonalish', 'direction')->required(),
             Text::make('Oquvchilar soni', 'schedule_image')->required(),
             Number::make('Natija foizi', 'result_percentage')->nullable(),
-            Image::make('Rasm', 'image')->dir('groups')->removable()->required(),
+            Image::make('Guruh Rasmi ', 'image')->dir('groups')->removable()->required(),
         ];
     }
 
@@ -50,8 +50,9 @@ class GroupResource extends ModelResource
             ID::make(),
             Text::make('Nomi', 'name'),
             Text::make('Yonalish' ,'direction')->required(),
+            Number::make('Natija foizi', 'result_percentage')->nullable(),
             Text::make('Oquvchi soni' ,'schedule_image'),
-            Image::make('Rasm', 'image'),
+            Image::make('Guruh Rasmi ', 'image'),
         ];
     }
 

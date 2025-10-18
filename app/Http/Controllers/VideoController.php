@@ -10,9 +10,10 @@ class VideoController extends Controller
     // Barcha videolarni chiqarish
     public function index()
     {
-        $videos = Video::latest()->get();
-
-        return view('videos.index', compact('videos'));
+        $groups = Group::all();
+        $courses = Course::with('videos')->get(); // Videos bilan birga yuklash
+        
+        return view('your-view-name', compact('groups', 'courses'));
     }
 
     // Yangi video qo‘shish

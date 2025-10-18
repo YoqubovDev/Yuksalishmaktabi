@@ -4,17 +4,17 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
+class CreateVideosTable extends Migration
 {
     public function up(): void
     {
         Schema::create('videos', function (Blueprint $table) {
             $table->id();
-            $table->string('title');            // Video sarlavhasi
-            $table->string('url', 500);         // YouTube URL
-            $table->date('published_at')->nullable(); // Sana
+            $table->string('title');                      // Video sarlavhasi
+            $table->string('url', 2048);                  // YouTube URL (uzun bo'lishi mumkin)
+            $table->date('published_at')->nullable();     // Sana
             $table->foreignId('course_id')->constrained()->cascadeOnDelete();
-            $table->timestamps();               // created_at va updated_at
+            $table->timestamps();                         // created_at va updated_at
         });
     }
 
@@ -22,4 +22,4 @@ return new class extends Migration
     {
         Schema::dropIfExists('videos');
     }
-};
+}

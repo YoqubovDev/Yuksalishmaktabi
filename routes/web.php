@@ -8,6 +8,7 @@ use App\Http\Controllers\TeacherController;
 use App\Http\Controllers\VideoController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DepartmentsController;
+use App\Http\Controllers\AchievementController;
 
 
 use Illuminate\Support\Facades\Route;
@@ -17,8 +18,9 @@ Route::get('/teachers', [TeacherController::class,'index'])->name('teachers');
 Route::get('/', [HomeSliderController::class,'index'])->name('home');
 Route::get('/dars', [GroupController::class, 'index'])->name('subject');
 Route::get('/photo', [VideoController::class, 'index'])->name('photo');
-Route::get('/yutuqlar', [PhotocardController::class, 'index'])->name('achievements');
+// Route::get('/yutuqlar', [PhotocardController::class, 'index'])->name('achievements');
 Route::get('/news', [NewsController::class, 'index'])->name('news');
+Route::get('/achievements', [AchievementController::class,'index'])->name('achievements');
 
 
 Route::get('/aloqa', function () {

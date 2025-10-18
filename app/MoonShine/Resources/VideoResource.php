@@ -5,16 +5,13 @@ declare(strict_types=1);
 namespace App\MoonShine\Resources;
 
 use App\Models\Video;
-use MoonShine\Laravel\Fields\Relationships\BelongsTo;
-use MoonShine\Laravel\Fields\Relationships\BelongsToMany;
+use App\MoonShine\Resources\CourseResource;
 use MoonShine\Laravel\Resources\ModelResource;
+use MoonShine\Laravel\Fields\Relationships\BelongsTo;
 use MoonShine\UI\Fields\Date;
 use MoonShine\UI\Fields\ID;
 use MoonShine\UI\Fields\Text;
-use MoonShine\UI\Fields\Image;
 use MoonShine\UI\Components\Layout\Box;
-use MoonShine\Contracts\UI\FieldContract;
-use MoonShine\Contracts\UI\ComponentContract;
 
 class VideoResource extends ModelResource
 {
@@ -27,10 +24,11 @@ class VideoResource extends ModelResource
             ID::make()->sortable(),
             Text::make('Sarlavha', 'title'),
             BelongsTo::make(
-                'Category ID and Name',
+                'Kurs',
                 'course',
-                fn($item)=>"$item->name",
-                CourseResource::class)->nullable(),
+                fn ($item) => $item?->title ?? '-',
+                CourseResource::class
+            )->nullable(),
             Text::make('YouTube URL', 'url'),
             Date::make('Sana', 'published_at'),
         ];
@@ -42,10 +40,11 @@ class VideoResource extends ModelResource
             Box::make([
                 Text::make('Sarlavha', 'title')->required(),
                 BelongsTo::make(
-                'Category ID and Name',
-                'course',
-                fn($item)=>"$item->name",
-                CourseResource::class)->nullable(),
+                    'Kurs',
+                    'course',
+                    fn ($item) => $item?->title ?? '-',
+                    CourseResource::class
+                )->nullable()->required(false),
                 Text::make('YouTube URL', 'url')->required(),
                 Date::make('Sana', 'published_at'),
             ]),
@@ -58,10 +57,11 @@ class VideoResource extends ModelResource
             ID::make(),
             Text::make('Sarlavha', 'title'),
             BelongsTo::make(
-                'Category ID and Name',
+                'Kurs',
                 'course',
-                fn($item)=>"$item->name",
-                CourseResource::class)->nullable(),
+                fn ($item) => $item?->title ?? '-',
+                CourseResource::class
+            )->nullable(),
             Text::make('YouTube URL', 'url'),
             Date::make('Sana', 'published_at'),
         ];
@@ -72,6 +72,7 @@ class VideoResource extends ModelResource
         return [
             'title' => ['required'],
             'url' => ['required', 'url'],
+            'course_id' => ['nullable', 'exists:courses,id'],
         ];
     }
 }

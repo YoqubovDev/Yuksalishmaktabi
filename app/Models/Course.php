@@ -3,20 +3,20 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Course extends Model
 {
     protected $fillable = [
         'title',
         'description',
-        'subjects',
         'icon',
         'duration',
-        'student_count',
-        'color',
+        'student_count'
     ];
 
-    public function videos()
+    // Course bir nechta videoga ega bo'lishi mumkin
+    public function videos(): HasMany
     {
         return $this->hasMany(Video::class);
     }

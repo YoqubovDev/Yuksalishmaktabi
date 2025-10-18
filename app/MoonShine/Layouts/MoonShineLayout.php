@@ -47,6 +47,9 @@ use MoonShine\UI\Components\{Breadcrumbs,
     use App\MoonShine\Resources\ContactResource;
     use App\MoonShine\Resources\DepartmentsResource;
     use App\MoonShine\Resources\CourseResource;
+    use App\MoonShine\Resources\AchievementResource;
+
+    
 
 
 
@@ -80,6 +83,8 @@ final class MoonShineLayout extends AppLayout
 
 
             ]),
+            
+            MenuItem::make('Yutuqlar ', AchievementResource::class),
             
 
             MenuItem::make('Maktab Rahbariyat', HomeSliderResource::class),
