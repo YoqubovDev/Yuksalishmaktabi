@@ -27,4 +27,9 @@ class Contact extends Model
         'rating',
         'reviews_count',
     ];
+
+    protected $casts = [
+        'rating' => 'decimal:1',
+        'reviews_count' => 'integer',
+    ];
 }

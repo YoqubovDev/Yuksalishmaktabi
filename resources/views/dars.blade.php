@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Turin Akademik Litsey</title>
+    <title>Jizzax Shahar Yuksalish Maktabi</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -125,7 +125,7 @@
             <div class="header-content">
                 <div class="logo">
                     <img src="/image/turin-al-logo.png" alt="turin-al-logo.png">
-                    <div class="logo-text">ACADEMIC LYCEUM</div>
+                    <div class="logo-text">Jizzax Shahar Yuksalish Maktabi</div>
                 </div>
                 <nav>
                     <ul>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Turin Akademik Litsey - Yutuqlar</title>
+    <title>Jizzax Shahar Yuksalish Maktabi - Yutuqlar</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
@@ -138,7 +138,7 @@
             <div class="header-content">
                 <div class="logo">
                     <img src="/image/turin-al-logo.png" alt="turin-al-logo.png">
-                    <div class="logo-text">ACADEMIC LYCEUM</div>
+                    <div class="logo-text">Jizzax Shahar Yuksalish Maktabi</div>
                 </div>
                 <nav>
                     <ul>

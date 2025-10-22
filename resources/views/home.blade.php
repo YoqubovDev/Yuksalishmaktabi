@@ -517,7 +517,7 @@
           <div class="header-content">
               <div class="logo">
                   <img src="/image/turin-al-logo.png" alt="turin-al-logo.png">
-                  <div class="logo-text">YUKSALISH MAKTABI</div>
+                  <div class="logo-text">Jizzax Shahar Yuksalish Maktabi</div>
               </div>
               <nav>
                   <ul>
@@ -880,6 +880,9 @@
           </div>
       </div>
   </footer>
+
+      <x-footer></x-footer>
+
 
   <!-- JavaScript for Sliders -->
   <script>
