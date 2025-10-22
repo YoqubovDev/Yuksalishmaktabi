@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\PhotoCard;
+use App\Models\Achievement;
 use Illuminate\Http\Request;
 
 class PhotocardController extends Controller
 {
     public function index()
     {
-        $yutuqlar = Photocard::all();
-        return view('yutuqlar', compact('yutuqlar'));
+        $achievements = Achievement::all();
+        return view('achievements', compact('achievements'));
     }
 }

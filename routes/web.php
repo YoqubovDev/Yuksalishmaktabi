@@ -20,7 +20,7 @@ Route::get('/dars', [GroupController::class, 'index'])->name('subject');
 Route::get('/photo', [VideoController::class, 'index'])->name('photo');
 // Route::get('/yutuqlar', [PhotocardController::class, 'index'])->name('achievements');
 Route::get('/news', [NewsController::class, 'index'])->name('news');
-Route::get('/achievements', [AchievementController::class,'index'])->name('achievements');
+Route::get('/achievements', [PhotocardController::class,'index'])->name('achievements');
 
 
 Route::get('/aloqa', function () {
