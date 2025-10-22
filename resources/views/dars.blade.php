@@ -352,13 +352,8 @@
         </section>
     </main>
 
-    <footer class="bg-gradient-to-b from-turin-dark to-gray-900 text-white py-16">
-        <div class="container mx-auto px-6">
-            <div class="text-center">
-                <p class="text-gray-400">© 2025 Turin Politexnika Universitetining Toshkent shahridagi filiali. Barcha huquqlar himoyalangan.</p>
-            </div>
-        </div>
-    </footer>
+    <!-- Footer -->
+    <x-footer></x-footer>
 
     <script>
     // GROUP MODAL FUNCTIONS

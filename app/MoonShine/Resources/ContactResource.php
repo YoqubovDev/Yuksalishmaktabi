@@ -22,7 +22,7 @@ class ContactResource extends ModelResource
     protected string $model = Contact::class;
 
     protected string $title = 'Contacts';
-    
+
     /**
      * @return list<FieldContract>
      */
@@ -34,18 +34,14 @@ class ContactResource extends ModelResource
             Phone::make('Phone', 'phone'),
             Phone::make('Fax', 'fax'),
             Text::make('Email', 'email'),
-
-            Date::make('Work start', 'work_time_start'),
-            Date::make('Work end', 'work_time_end'),
-            Date::make('Lunch start', 'lunch_time_start'),
-            Date::make('Lunch end', 'lunch_time_end'),
-
+            Text::make('Lunch Time', 'lunch_time'),
+            Text::make('Work Time', 'work_time'),
             Number::make('Bus', 'bus'),
             Number::make('Mashrut','marshrut'),
             Text::make('Telegram', 'telegram'),
             Text::make('Facebook', 'facebook'),
             Text::make('Youtube', 'youtube'),
-            Text::make('Instagram', 'instagram'), 
+            Text::make('Instagram', 'instagram'),
         ];
     }
 
@@ -62,11 +58,8 @@ class ContactResource extends ModelResource
                 Phone::make('Fax', 'fax'),
                 Text::make('Email', 'email'),
 
-                Date::make('Work start', 'work_time_start'),
-                Date::make('Work end', 'work_time_end'),
-                Date::make('Lunch start', 'lunch_time_start'),
-                Date::make('Lunch end', 'lunch_time_end'),
-
+                Text::make('Lunch Time', 'lunch_time'),
+                Text::make('Work Time', 'work_time'),
                 Number::make('Bus', 'bus'),
                 Number::make('Mashrut','marshrut'),
                 Text::make('Telegram', 'telegram'),
@@ -89,10 +82,8 @@ class ContactResource extends ModelResource
             Phone::make('Fax', 'fax'),
             Text::make('Email', 'email'),
 
-            Date::make('Work start', 'work_time_start'),
-            Date::make('Work end', 'work_time_end'),
-            Date::make('Lunch start', 'lunch_time_start'),
-            Date::make('Lunch end', 'lunch_time_end'),
+            Text::make('Lunch Time', 'lunch_time'),
+            Text::make('Work Time', 'work_time'),
 
             Number::make('Bus', 'bus'),
             Number::make('Mashrut','marshrut'),
