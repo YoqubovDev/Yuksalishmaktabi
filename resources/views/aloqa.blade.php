@@ -262,7 +262,7 @@
     <div class="header-container">
         <div class="header-content">
             <div class="logo">
-                <img src="/image/turin-al-logo.png" alt="Turin Academic Lyceum Logo">
+                <img src="/image/turin-al-logo.png" alt="Jizzax Shahar Yuksalish MaktabiLogo">
                 <div class="logo-text">Jizzax Shahar Yuksalish Maktabi</div>
             </div>
             <nav>
@@ -278,7 +278,6 @@
         </div>
     </div>
 </header>
-
 <!-- Breadcrumb -->
 <div class="bg-white border-b py-4 shadow-sm">
     <div class="container mx-auto px-4">
@@ -296,7 +295,7 @@
 <main class="container mx-auto px-4 py-12">
     <div class="mb-10 text-center">
         <h1 class="text-4xl font-bold text-dark-blue mb-4">Biz bilan bog'laning</h1>
-        <p class="text-gray-600 max-w-2xl mx-auto">Turin akademik litseyi bilan bog'lanish uchun quyidagi ma'lumotlardan foydalanishingiz mumkin</p>
+        <p class="text-gray-600 max-w-2xl mx-auto">Jizzax Shahar Yuksalish maktabi bilan bog'lanish uchun quyidagi ma'lumotlardan foydalanishingiz mumkin</p>
         <div class="w-24 h-1 bg-university-blue mx-auto mt-4"></div>
     </div>
 
@@ -474,139 +473,6 @@
         </div>
     @endif
 </main>
-
-<!-- Footer -->
-{{--<footer class="footer">--}}
-{{--    <div class="footer-top">--}}
-{{--        <div class="container mx-auto px-6">--}}
-{{--            <div class="flex flex-col md:flex-row justify-between items-start mb-12 pb-12 border-b border-gray-700">--}}
-{{--                <!-- Logo and Description -->--}}
-{{--                <div class="mb-10 md:mb-0 md:w-1/3 pr-6">--}}
-{{--                    <div class="footer-logo">--}}
-{{--                        <div class="footer-logo-circle">--}}
-{{--                            <span class="text-university-blue text-2xl font-bold">T</span>--}}
-{{--                        </div>--}}
-{{--                        <div>--}}
-{{--                            <div class="text-2xl font-bold">TURIN</div>--}}
-{{--                            <div class="text-sm text-gray-300">ACADEMIC LYCEUM</div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                    <p class="text-gray-300 mb-6">--}}
-{{--                        Turin akademik litseyi O'zbekiston va Italiya hamkorligidagi nufuzli ta'lim muassasasi bo'lib, zamonaviy ta'lim va innovatsion yondashuvlarga asoslangan.--}}
-{{--                    </p>--}}
-{{--                    @if(isset($contact) && $contact)--}}
-{{--                        <div class="flex space-x-4">--}}
-{{--                            @if($contact->telegram)--}}
-{{--                                <a href="{{ $contact->telegram }}" target="_blank" class="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-university-blue transition-all duration-300">--}}
-{{--                                    <i class="fab fa-telegram"></i>--}}
-{{--                                </a>--}}
-{{--                            @endif--}}
-{{--                            @if($contact->facebook)--}}
-{{--                                <a href="{{ $contact->facebook }}" target="_blank" class="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-university-blue transition-all duration-300">--}}
-{{--                                    <i class="fab fa-facebook-f"></i>--}}
-{{--                                </a>--}}
-{{--                            @endif--}}
-{{--                            @if($contact->youtube)--}}
-{{--                                <a href="{{ $contact->youtube }}" target="_blank" class="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-university-blue transition-all duration-300">--}}
-{{--                                    <i class="fab fa-youtube"></i>--}}
-{{--                                </a>--}}
-{{--                            @endif--}}
-{{--                            @if($contact->instagram)--}}
-{{--                                <a href="{{ $contact->instagram }}" target="_blank" class="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-university-blue transition-all duration-300">--}}
-{{--                                    <i class="fab fa-instagram"></i>--}}
-{{--                                </a>--}}
-{{--                            @endif--}}
-{{--                        </div>--}}
-{{--                    @endif--}}
-{{--                </div>--}}
-
-{{--                <!-- Quick Contact -->--}}
-{{--                @if(isset($contact) && $contact)--}}
-{{--                    <div class="mb-10 md:mb-0 md:w-1/3">--}}
-{{--                        <h3 class="footer-heading text-xl font-bold">Tezkor aloqa</h3>--}}
-{{--                        <div class="space-y-6">--}}
-{{--                            @if($contact->address)--}}
-{{--                                <div class="flex items-center">--}}
-{{--                                    <div class="bg-university-blue p-3 rounded-full mr-4">--}}
-{{--                                        <i class="fas fa-map-marker-alt text-white"></i>--}}
-{{--                                    </div>--}}
-{{--                                    <div>--}}
-{{--                                        <div class="text-gray-400 text-sm">Manzil</div>--}}
-{{--                                        <div class="text-white">{{ $contact->address }}</div>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            @endif--}}
-
-{{--                            @if($contact->phone)--}}
-{{--                                <div class="flex items-center">--}}
-{{--                                    <div class="bg-university-blue p-3 rounded-full mr-4">--}}
-{{--                                        <i class="fas fa-phone-alt text-white"></i>--}}
-{{--                                    </div>--}}
-{{--                                    <div>--}}
-{{--                                        <div class="text-gray-400 text-sm">Telefon</div>--}}
-{{--                                        <div class="text-white">(+998) {{ $contact->phone }}</div>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            @endif--}}
-
-{{--                            @if($contact->email)--}}
-{{--                                <div class="flex items-center">--}}
-{{--                                    <div class="bg-university-blue p-3 rounded-full mr-4">--}}
-{{--                                        <i class="fas fa-envelope text-white"></i>--}}
-{{--                                    </div>--}}
-{{--                                    <div>--}}
-{{--                                        <div class="text-gray-400 text-sm">Email</div>--}}
-{{--                                        <a href="mailto:{{ $contact->email }}" class="text-white hover:text-blue-300 transition-colors duration-300">{{ $contact->email }}</a>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            @endif--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                @endif--}}
-
-{{--                <!-- Quick Links -->--}}
-{{--                <div class="md:w-1/3">--}}
-{{--                    <h3 class="footer-heading text-xl font-bold">Foydali havolalar</h3>--}}
-{{--                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">--}}
-{{--                        <a href="{{route('home')}}" class="footer-nav-item text-gray-300 hover:text-white transition-colors duration-300">--}}
-{{--                            <i class="fas fa-chevron-right"></i> Asosiy sahifa--}}
-{{--                        </a>--}}
-{{--                        <a href="{{route('about')}}" class="footer-nav-item text-gray-300 hover:text-white transition-colors duration-300">--}}
-{{--                            <i class="fas fa-chevron-right"></i> Litsey haqida--}}
-{{--                        </a>--}}
-{{--                        <a href="{{route('teachers')}}" class="footer-nav-item text-gray-300 hover:text-white transition-colors duration-300">--}}
-{{--                            <i class="fas fa-chevron-right"></i> O'qituvchilar--}}
-{{--                        </a>--}}
-{{--                        <a href="{{route('subject')}}" class="footer-nav-item text-gray-300 hover:text-white transition-colors duration-300">--}}
-{{--                            <i class="fas fa-chevron-right"></i> Dars jarayonlari--}}
-{{--                        </a>--}}
-{{--                        <a href="{{route('achievements')}}" class="footer-nav-item text-gray-300 hover:text-white transition-colors duration-300">--}}
-{{--                            <i class="fas fa-chevron-right"></i> Yutuqlar--}}
-{{--                        </a>--}}
-{{--                        <a href="{{route('contact')}}" class="footer-nav-item text-gray-300 hover:text-white transition-colors duration-300">--}}
-{{--                            <i class="fas fa-chevron-right"></i> Aloqa--}}
-{{--                        </a>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </div>--}}
-
-{{--    <!-- Footer Bottom -->--}}
-{{--    <div class="footer-bottom">--}}
-{{--        <div class="container mx-auto px-6">--}}
-{{--            <div class="flex flex-col md:flex-row justify-between items-center">--}}
-{{--                <div class="mb-4 md:mb-0">--}}
-{{--                    <p class="text-gray-300">&copy; 2025 Turin Academic Lyceum. Barcha huquqlar himoyalangan.</p>--}}
-{{--                </div>--}}
-{{--                <div class="flex items-center gap-4">--}}
-{{--                    <a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">Maxfiylik siyosati</a>--}}
-{{--                    <a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">Foydalanish shartlari</a>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </div>--}}
-{{--</footer>--}}
 <x-footer></x-footer>
 
 </body>

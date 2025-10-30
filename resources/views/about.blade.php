@@ -562,6 +562,28 @@
             nav ul {
                 gap: 1rem;
             }
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+            .hover-lift:hover {
+                transform: translateY(-8px);
+            }
+
+            .hover-scale {
+                transition: transform 0.3s ease;
+            }
+
+            .hover-scale:hover {
+                transform: scale(1.05);
+            }
+
+            .line-clamp-2 {
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
         }
     </style>
 </head>
@@ -571,7 +593,7 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <img src="/image/turin-al-logo.png" alt="turin-al-logo.png">
+                    <img src="/image/yuksalish-maktabi-al-logo.jpeg" alt="yuksalish-maktabi-al-logo.jpeg">
                     <div class="logo-text">Jizzax Shahar Yuksalish Maktabi</div>
                 </div>
                 <nav>
@@ -612,12 +634,13 @@
     </section>
 
     <!-- Latest News Section -->
-        <section id="news" class="py-20">
+    <!-- Latest News Section -->
+    <section id="news" class="py-20">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <span class="inline-block mb-4 bg-cyan-600/10 text-cyan-600 border border-cyan-600/20 px-3 py-1 rounded-full text-sm">
-                    Yangiliklar
-                </span>
+            <span class="inline-block mb-4 bg-cyan-600/10 text-cyan-600 border border-cyan-600/20 px-3 py-1 rounded-full text-sm">
+                Yangiliklar
+            </span>
                 <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">So'nggi yangiliklar</h2>
                 <p class="text-lg text-gray-600 max-w-2xl mx-auto">
                     Maktabimizning so'nggi yangiliklari va tadbirlari bilan tanishing
@@ -625,219 +648,65 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- News Card 1 -->
-                <div class="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover-lift overflow-hidden">
-                    <div class="aspect-video overflow-hidden">
-                        <img
-                            src="/modern-chemistry-laboratory-with-students.jpg"
-                            alt="Yangi laboratoriya ochildi"
-                            class="w-full h-full object-cover hover-scale transition-transform duration-300"
-                        />
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center gap-2 text-sm text-gray-600 mb-2">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3a2 2 0 012-2h4a2 2 0 012 2v4m-6 0V6a2 2 0 012-2h4a2 2 0 012 2v1m-6 0h8m-8 0H6a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V9a2 2 0 00-2-2h-2"></path>
-                            </svg>
-                            15.01.2025
+                @forelse($news as $item)
+                    <!-- News Card -->
+                    <div class="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover-lift overflow-hidden">
+                        <div class="aspect-video overflow-hidden">
+                            @if($item->image)
+                                <img
+                                    src="{{ asset('storage/' . $item->image) }}"
+                                    alt="{{ $item->title }}"
+                                    class="w-full h-full object-cover hover-scale transition-transform duration-300"
+                                />
+                            @else
+                                <img
+                                    src="/placeholder-news.jpg"
+                                    alt="Default image"
+                                    class="w-full h-full object-cover hover-scale transition-transform duration-300"
+                                />
+                            @endif
                         </div>
-                        <h3 class="text-lg font-semibold hover:text-cyan-600 transition-colors mb-2">Yangi laboratoriya ochildi</h3>
-                        <p class="text-gray-600 mb-4">Zamonaviy kimyo laboratoriyasi talabalar uchun ochildi</p>
-                        <button class="text-cyan-600 hover:text-cyan-700 transition-colors flex items-center">
-                            Batafsil o'qish
-                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- News Card 2 -->
-                <div class="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover-lift overflow-hidden">
-                    <div class="aspect-video overflow-hidden">
-                        <img
-                            src="/international-partnership-signing-ceremony.jpg"
-                            alt="Xalqaro hamkorlik kengaydi"
-                            class="w-full h-full object-cover hover-scale transition-transform duration-300"
-                        />
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center gap-2 text-sm text-gray-600 mb-2">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3a2 2 0 012-2h4a2 2 0 012 2v4m-6 0V6a2 2 0 012-2h4a2 2 0 012 2v1m-6 0h8m-8 0H6a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V9a2 2 0 00-2-2h-2"></path>
-                            </svg>
-                            10.01.2025
+                        <div class="p-6">
+                            <div class="flex items-center gap-2 text-sm text-gray-600 mb-2">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3a2 2 0 012-2h4a2 2 0 012 2v4m-6 0V6a2 2 0 012-2h4a2 2 0 012 2v1m-6 0h8m-8 0H6a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V9a2 2 0 00-2-2h-2"></path>
+                                </svg>
+                                {{ $item->published_at ? $item->published_at->format('d.m.Y') : $item->created_at->format('d.m.Y') }}
+                            </div>
+                            <h3 class="text-lg font-semibold hover:text-cyan-600 transition-colors mb-2">
+                                {{ $item->title }}
+                            </h3>
+                            <p class="text-gray-600 mb-4 line-clamp-2">
+                                {{ $item->excerpt ?? Str::limit($item->content, 100) }}
+                            </p>
+{{--                            <a href="{{ route('news.show', $item->slug) }}" class="text-cyan-600 hover:text-cyan-700 transition-colors flex items-center">--}}
+{{--                                Batafsil o'qish--}}
+{{--                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">--}}
+{{--                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>--}}
+{{--                                </svg>--}}
+{{--                            </a>--}}
                         </div>
-                        <h3 class="text-lg font-semibold hover:text-cyan-600 transition-colors mb-2">Xalqaro hamkorlik kengaydi</h3>
-                        <p class="text-gray-600 mb-4">Italiya universitetlari bilan yangi shartnomalar imzolandi</p>
-                        <button class="text-cyan-600 hover:text-cyan-700 transition-colors flex items-center">
-                            Batafsil o'qish
-                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                            </svg>
-                        </button>
                     </div>
-                </div>
-
-                <!-- News Card 3 -->
-                <div class="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover-lift overflow-hidden">
-                    <div class="aspect-video overflow-hidden">
-                        <img
-                            src="/students-celebrating-victory-at-international-olym.jpg"
-                            alt="Talabalar yutuqlari"
-                            class="w-full h-full object-cover hover-scale transition-transform duration-300"
-                        />
+                @empty
+                    <div class="col-span-full text-center py-12">
+                        <p class="text-gray-500 text-lg">Hozircha yangiliklar mavjud emas</p>
                     </div>
-                    <div class="p-6">
-                        <div class="flex items-center gap-2 text-sm text-gray-600 mb-2">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3a2 2 0 012-2h4a2 2 0 012 2v4m-6 0V6a2 2 0 012-2h4a2 2 0 012 2v1m-6 0h8m-8 0H6a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V9a2 2 0 00-2-2h-2"></path>
-                            </svg>
-                            05.01.2025
-                        </div>
-                        <h3 class="text-lg font-semibold hover:text-cyan-600 transition-colors mb-2">Talabalar yutuqlari</h3>
-                        <p class="text-gray-600 mb-4">Bizning talabalar xalqaro olimpiadada g'olib bo'ldi</p>
-                        <button class="text-cyan-600 hover:text-cyan-700 transition-colors flex items-center">
-                            Batafsil o'qish
-                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
+                @endforelse
             </div>
+
+            @if($news->count() >= 3)
+                <div class="text-center mt-12">
+{{--                    <a href="{{ route('news') }}" class="inline-block bg-cyan-600 hover:bg-cyan-700 text-white font-semibold px-8 py-3 rounded-lg transition-colors duration-300">--}}
+{{--                        Barcha yangiliklar--}}
+{{--                        <svg class="w-5 h-5 inline-block ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">--}}
+{{--                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>--}}
+{{--                        </svg>--}}
+{{--                    </a>--}}
+                </div>
+            @endif
         </div>
     </section>
 
-    <!-- Footer -->
-    <!-- Footer with improved design -->
-    <!-- Enhanced Footer -->
-{{--    <footer id="contact" class="bg-gradient-to-b from-turin-dark to-gray-900 text-white py-16">--}}
-{{--        <!-- Top Footer Section with Logo and Quick Info -->--}}
-{{--        <div class="container mx-auto px-6 mb-10">--}}
-{{--            <div class="flex flex-col md:flex-row items-center justify-between border-b border-gray-700 pb-10">--}}
-{{--                <!-- Logo Section -->--}}
-{{--                <div class="flex items-center mb-6 md:mb-0">--}}
-{{--                    <div class="mr-6">--}}
-{{--                        <div class="w-16 h-16 rounded-full border-2 border-white flex items-center justify-center bg-white bg-opacity-10 backdrop-blur-sm">--}}
-{{--                            <div class="text-2xl font-serif font-bold text-white">T</div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                    <div>--}}
-{{--                        <div class="text-3xl font-serif font-bold text-white">TTPU</div>--}}
-{{--                        <div class="text-sm tracking-widest text-gray-300">Akademik Litsey</div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-
-{{--                <!-- Quick Contact -->--}}
-{{--                <div class="flex flex-wrap justify-center gap-6">--}}
-{{--                    <div class="flex items-center bg-white bg-opacity-10 rounded-lg px-4 py-3">--}}
-{{--                        <div class="bg-unipix-light p-2 rounded-full mr-3">--}}
-{{--                            <i class="fas fa-phone-alt text-white"></i>--}}
-{{--                        </div>--}}
-{{--                        <div>--}}
-{{--                            <div class="text-gray-400 text-xs">Telefon</div>--}}
-{{--                            <a href="tel:+13125550123" class="text-white hover:text-unipix-light transition-colors duration-300">(+99871) 246-23-31</a>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-
-{{--                    <div class="flex items-center bg-white bg-opacity-10 rounded-lg px-4 py-3">--}}
-{{--                        <div class="bg-unipix-light p-2 rounded-full mr-3">--}}
-{{--                            <i class="fas fa-envelope text-white"></i>--}}
-{{--                        </div>--}}
-{{--                        <div>--}}
-{{--                            <div class="text-gray-400 text-xs">Email</div>--}}
-{{--                            <a href="mailto:info@unipix.edu" class="text-white hover:text-unipix-light transition-colors duration-300">info@turinal.uz</a>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-
-{{--        <!-- Main Footer Content -->--}}
-{{--        <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 px-6">--}}
-{{--            <!-- Column 1 - About -->--}}
-{{--            <div>--}}
-{{--                <h3 class="text-xl font-bold mb-6 relative">--}}
-{{--                    <span class="bg-unipix-light h-1 w-8 absolute -bottom-2 left-0"></span>--}}
-{{--                    Litsey haqida--}}
-{{--                </h3>--}}
-{{--                <p class="text-gray-300 mb-6 leading-relaxed">--}}
-{{--                    Turin akademik litseyi O'zbekiston va Italiya hamkorligidagi nufuzli ta'lim muassasasi bo'lib, zamonaviy ta'lim va innovatsion yondashuvlarga asoslangan.--}}
-{{--                </p>--}}
-{{--                <div class="flex space-x-3 mt-4">--}}
-{{--                    <a href="#" class="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-unipix-light transition-colors duration-300">--}}
-{{--                        <i class="fab fa-facebook-f"></i>--}}
-{{--                    </a>--}}
-{{--                    <a href="#" class="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-unipix-light transition-colors duration-300">--}}
-{{--                        <i class="fab fa-linkedin-in"></i>--}}
-{{--                    </a>--}}
-{{--                    <a href="#" class="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-unipix-light transition-colors duration-300">--}}
-{{--                        <i class="fab fa-youtube"></i>--}}
-{{--                    </a>--}}
-{{--                    <a href="#" class="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-unipix-light transition-colors duration-300">--}}
-{{--                        <i class="fab fa-twitter"></i>--}}
-{{--                    </a>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-
-{{--            <!-- Column 3 - Our Programs -->--}}
-{{--            <div>--}}
-{{--                <h3 class="text-xl font-bold mb-6 relative">--}}
-{{--                    <span class="bg-unipix-light h-1 w-8 absolute -bottom-2 left-0"></span>--}}
-{{--                    Ta'lim yo'nalishlari--}}
-{{--                </h3>--}}
-{{--                <ul class="space-y-3">--}}
-{{--                    <li>--}}
-{{--                        <a href="#" class="flex items-center text-gray-300 hover:text-white transition-colors duration-300 group">--}}
-{{--                            <span class="w-2 h-2 bg-unipix-light rounded-full mr-3 group-hover:w-3 transition-all duration-300"></span>--}}
-{{--                            Kompyuter texnologiyalari va muhandislik--}}
-{{--                        </a>--}}
-{{--                    </li>--}}
-{{--                    <li>--}}
-{{--                        <a href="#" class="flex items-center text-gray-300 hover:text-white transition-colors duration-300 group">--}}
-{{--                            <span class="w-2 h-2 bg-unipix-light rounded-full mr-3 group-hover:w-3 transition-all duration-300"></span>--}}
-{{--                            Iqtisodiyot va tabiy fanlar--}}
-{{--                        </a>--}}
-{{--                    </li>--}}
-{{--                </ul>--}}
-{{--            </div>--}}
-
-{{--            <!-- Column 4 - Newsletter Signup -->--}}
-{{--            <div>--}}
-{{--                <h3 class="text-xl font-bold mb-6 relative">--}}
-{{--                    <span class="bg-unipix-light h-1 w-8 absolute -bottom-2 left-0"></span>--}}
-{{--                    Aloqada qoling--}}
-{{--                </h3>--}}
-{{--                <p class="text-gray-300 mb-6">--}}
-{{--                    Turin Politexnika Universitetining Toshkent shahridagi filiali haqida yangiliklar, tadbirlar va e’lonnardan xabardor bo‘lish uchun obuna bo‘ling.--}}
-{{--                </p>--}}
-{{--                <div class="flex justify-between items-center">--}}
-{{--                    <p class="text-gray-400 text-sm">--}}
-{{--                        <i class="fas fa-headset mr-2 text-unipix-light"></i> Yordam xizmati: 24/7 faol--}}
-{{--                    </p>--}}
-{{--                    <a href="tel:+998712462331" class="bg-unipix-light text-white px-4 py-2 rounded-lg hover:bg-unipix-blue transition-colors duration-300">--}}
-{{--                        Bog‘lanish--}}
-{{--                    </a>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-
-{{--        </div>--}}
-
-{{--        <!-- Bottom Footer -->--}}
-{{--        <div class="container mx-auto mt-12 pt-6 border-t border-gray-800 px-6">--}}
-{{--            <div class="flex flex-col md:flex-row justify-between items-center">--}}
-{{--                <p class="text-gray-400 mb-4 md:mb-0">--}}
-{{--                    © 2025 Turin Politexnika Universitetining Toshkent shahridagi filiali. Barcha huquqlar himoyalangan.--}}
-{{--                </p>--}}
-{{--                <div class="flex space-x-6">--}}
-{{--                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 text-sm">Maxfiylik siyosati</a>--}}
-{{--                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 text-sm">Foydalanish shartlari</a>--}}
-{{--                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 text-sm">Cookie siyosati</a>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </footer>--}}
     <x-footer></x-footer>
 
     <!-- JavaScript for menu toggle -->

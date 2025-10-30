@@ -42,14 +42,13 @@ use MoonShine\UI\Components\{Breadcrumbs,
     use App\MoonShine\Resources\QabulrasmiResource;
     use App\MoonShine\Resources\SliderResource;
     use App\MoonShine\Resources\TeacherResource;
-    use App\MoonShine\Resources\VideoResource;
-    use App\MoonShine\Resources\UserResource;
     use App\MoonShine\Resources\ContactResource;
     use App\MoonShine\Resources\DepartmentsResource;
     use App\MoonShine\Resources\CourseResource;
     use App\MoonShine\Resources\AchievementResource;
+    use App\MoonShine\Resources\NewsResource;
 
-    
+
 
 
 
@@ -83,16 +82,16 @@ final class MoonShineLayout extends AppLayout
 
 
             ]),
-            
+
             MenuItem::make('Yutuqlar ', AchievementResource::class),
-            
+            MenuItem::make('News', NewsResource::class),
+
+
 
             MenuItem::make('Maktab Rahbariyat', HomeSliderResource::class),
             MenuItem::make('Qabul Rasmi', QabulrasmiResource::class),
-            MenuItem::make('PhotoCardResource', PhotoCardResource::class),
-            MenuItem::make('SliderResource',SliderResource::class),
-            MenuItem::make('VideoResource', VideoResource::class),
-            MenuItem::make('UserResource', UserResource::class),
+            MenuItem::make('Photo Card', PhotoCardResource::class),
+            MenuItem::make('Slider',SliderResource::class),
             MenuItem::make('Contacts', ContactResource::class),
         ];
     }

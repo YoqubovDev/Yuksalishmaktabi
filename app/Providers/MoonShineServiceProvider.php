@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Providers;
 
+use App\MoonShine\Resources\NewsResource;
 use Illuminate\Support\ServiceProvider;
 use MoonShine\Contracts\Core\DependencyInjection\ConfiguratorContract;
 use MoonShine\Contracts\Core\DependencyInjection\CoreContract;
@@ -50,9 +51,11 @@ class MoonShineServiceProvider extends ServiceProvider
                 QabulrasmiResource::class,
                 UserResource::class,
                 ContactResource::class,
-                DepartmentsResource::class, 
+                DepartmentsResource::class,
                 CourseResource::class,
                 AchievementResource::class,
+                NewsResource::class,
+
             ])
             ->pages([
                 ...$config->getPages(),
