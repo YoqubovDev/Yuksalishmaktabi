@@ -516,7 +516,7 @@
       <div class="container">
           <div class="header-content">
               <div class="logo">
-                  <img src="/image/turin-al-logo.png" alt="turin-al-logo.png">
+                  <img src="/image/yuksalish-maktabi-al-logo.jpeg" alt="yuksalish-maktabi-al-logo.jpeg">
                   <div class="logo-text">Jizzax Shahar Yuksalish Maktabi</div>
               </div>
               <nav>
@@ -530,11 +530,6 @@
                       <li><a href="{{route('contact')}}">Aloqa</a></li>
                   </ul>
               </nav>
-{{--              <div class="lang-switcher">--}}
-{{--                  <a href="#">RU</a>--}}
-{{--                  <a href="#">EN</a>--}}
-{{--                  <a href="#">UZ</a>--}}
-{{--              </div>--}}
           </div>
       </div>
   </header>
@@ -544,7 +539,7 @@
     <div class="main-slides">
       <!-- Slide 1 -->
       <div class="main-slide">
-        <img src="/image/photo_27_2025-03-24_00-16-14.jpg" alt="Campus Building" class="w-full h-full object-cover">
+        <img src="/image/orig.jpeg" alt="Campus Building" class="w-full h-full object-cover">
         <div class="absolute inset-0 gradient-overlay flex flex-col items-center justify-center text-white">
           <p class="text-white mb-4 flex items-center font-light tracking-widest uppercase text-sm">
             <span class="mr-2"><i class="fas fa-graduation-cap"></i></span>
@@ -633,13 +628,6 @@
           </div>
       </div>
   </section>
-
-
-
-
-
-
-
 
   <!-- About Section -->
   <section id="about" class="bg-gray-100 py-12">

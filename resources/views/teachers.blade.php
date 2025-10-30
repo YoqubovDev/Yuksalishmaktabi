@@ -1,207 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jizzax Shahar Yuksalish Maktabi</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-
-    <!-- Swiper CSS -->
-    <!-- Swiper CSS -->
-
-
-    <style>
-        :root {
-            --primary-color: #0a4480;
-            --secondary-color: #1a6cb4;
-            --text-color: #333;
-            --light-bg: #f5f7fa;
-            --white: #ffffff;
-            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: var(--light-bg);
-            color: var(--text-color);
-        }
-
-        header {
-            background-color: var(--primary-color);
-            color: var(--white);
-            padding: 1rem 0;
-            box-shadow: var(--shadow);
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .logo img {
-            height: 60px;
-        }
-
-        .logo-text {
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-
-        nav ul {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        nav a {
-            color: var(--white);
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-
-        nav a:hover {
-            color: #b8d8ff;
-        }
-
-        .lang-switcher {
-            display: flex;
-            gap: 0.5rem;
-        }
-
-        .lang-switcher a {
-            color: var(--white);
-            text-decoration: none;
-            font-size: 0.9rem;
-        }
-
-        /* Teacher slider styles */
-        .teacher-slider {
-            padding: 40px 0;
-        }
-
-        .teacher-slide {
-            padding: 15px;
-            outline: none;
-        }
-
-        .teacher-card {
-            background-color: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-        }
-
-        .teacher-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
-        }
-
-        .teacher-image {
-            height: 250px;
-            overflow: hidden;
-        }
-
-        .teacher-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .teacher-card:hover .teacher-image img {
-            transform: scale(1.05);
-        }
-
-        .teacher-info {
-            padding: 20px;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 2rem;
-            color: var(--primary-color);
-            font-size: 2rem;
-            position: relative;
-        }
-
-        .section-title:after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100px;
-            height: 3px;
-            background-color: var(--secondary-color);
-        }
-
-        .slick-prev, .slick-next {
-            z-index: 10;
-            width: 40px;
-            height: 40px;
-        }
-
-        .slick-prev {
-            left: 25px;
-        }
-
-        .slick-next {
-            right: 25px;
-        }
-
-        .slick-prev:before, .slick-next:before {
-            font-size: 30px;
-        }
-
-        @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            nav ul {
-                gap: 1rem;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-        }
-    </style>
+<x-header></x-header>
     <script>
         tailwind.config = {
             theme: {
@@ -224,20 +21,19 @@
             }
         }
     </script>
-</head>
 <body class="bg-gray-50">
     <!-- Header -->
     <header>
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <img src="/image/turin-al-logo.png" alt="turin-al-logo.png">
+                    <img src="/image/yuksalish-maktabi-al-logo.jpeg" alt="yuksalish-maktabi-al-logo.jpeg">
                     <div class="logo-text">Jizzax Shahar Yuksalish Maktabi</div>
                 </div>
                 <nav>
                     <ul>
                         <li><a href="{{route('home')}}">Home</a></li>
-                        <li><a href="{{route('about')}}">Litsey haqida</a></li>
+                        <li><a href="{{route('about')}}">Maktab haqida</a></li>
                         <!-- <li><a href="{{route('photo')}}">Yangiliklar</a></li> -->
                         <li><a href="{{route('teachers')}}">O'qituvchilar</a></li>
                         <li><a href="{{route('subject')}}">Dars jarayonlari</a></li>
@@ -287,6 +83,7 @@
                 <!-- Navigation buttons -->
                 <div class=".swiper-button-next"></div>
                 <div class=".swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
         </div>
     </section>
@@ -370,140 +167,7 @@
         });
     </script>
 
-
-
-
-
     <!-- Footer -->
-  <!-- Footer with improved design -->
-{{--    <footer id="contact" class="bg-gradient-to-b from-turin-dark to-gray-900 text-white py-16">--}}
-{{--        <!-- Top Footer Section with Logo and Quick Info -->--}}
-{{--        <div class="container mx-auto px-6 mb-10">--}}
-{{--            <div class="flex flex-col md:flex-row items-center justify-between border-b border-gray-700 pb-10">--}}
-{{--                <!-- Logo Section -->--}}
-{{--                <div class="flex items-center mb-6 md:mb-0">--}}
-{{--                    <div class="mr-6">--}}
-{{--                        <div class="w-16 h-16 rounded-full border-2 border-white flex items-center justify-center bg-white bg-opacity-10 backdrop-blur-sm">--}}
-{{--                            <div class="text-2xl font-serif font-bold text-white">T</div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                    <div>--}}
-{{--                        <div class="text-3xl font-serif font-bold text-white">TTPU</div>--}}
-{{--                        <div class="text-sm tracking-widest text-gray-300">Akademik Litsey</div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-
-{{--                <!-- Quick Contact -->--}}
-{{--                <div class="flex flex-wrap justify-center gap-6">--}}
-{{--                    <div class="flex items-center bg-white bg-opacity-10 rounded-lg px-4 py-3">--}}
-{{--                        <div class="bg-unipix-light p-2 rounded-full mr-3">--}}
-{{--                            <i class="fas fa-phone-alt text-white"></i>--}}
-{{--                        </div>--}}
-{{--                        <div>--}}
-{{--                            <div class="text-gray-400 text-xs">Telefon</div>--}}
-{{--                            <a href="tel:+13125550123" class="text-white hover:text-unipix-light transition-colors duration-300">(+99871) 246-23-31</a>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-
-{{--                    <div class="flex items-center bg-white bg-opacity-10 rounded-lg px-4 py-3">--}}
-{{--                        <div class="bg-unipix-light p-2 rounded-full mr-3">--}}
-{{--                            <i class="fas fa-envelope text-white"></i>--}}
-{{--                        </div>--}}
-{{--                        <div>--}}
-{{--                            <div class="text-gray-400 text-xs">Email</div>--}}
-{{--                            <a href="mailto:info@unipix.edu" class="text-white hover:text-unipix-light transition-colors duration-300">info@turinal.uz</a>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-
-{{--        <!-- Main Footer Content -->--}}
-{{--        <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 px-6">--}}
-{{--            <!-- Column 1 - About -->--}}
-{{--            <div>--}}
-{{--                <h3 class="text-xl font-bold mb-6 relative">--}}
-{{--                    <span class="bg-unipix-light h-1 w-8 absolute -bottom-2 left-0"></span>--}}
-{{--                    Litsey haqida--}}
-{{--                </h3>--}}
-{{--                <p class="text-gray-300 mb-6 leading-relaxed">--}}
-{{--                    Turin akademik litseyi O'zbekiston va Italiya hamkorligidagi nufuzli ta'lim muassasasi bo'lib, zamonaviy ta'lim va innovatsion yondashuvlarga asoslangan.--}}
-{{--                </p>--}}
-{{--                <div class="flex space-x-3 mt-4">--}}
-{{--                    <a href="#" class="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-unipix-light transition-colors duration-300">--}}
-{{--                        <i class="fab fa-facebook-f"></i>--}}
-{{--                    </a>--}}
-{{--                    <a href="#" class="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-unipix-light transition-colors duration-300">--}}
-{{--                        <i class="fab fa-linkedin-in"></i>--}}
-{{--                    </a>--}}
-{{--                    <a href="#" class="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-unipix-light transition-colors duration-300">--}}
-{{--                        <i class="fab fa-youtube"></i>--}}
-{{--                    </a>--}}
-{{--                    <a href="#" class="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-unipix-light transition-colors duration-300">--}}
-{{--                        <i class="fab fa-twitter"></i>--}}
-{{--                    </a>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-
-{{--            <!-- Column 3 - Our Programs -->--}}
-{{--            <div>--}}
-{{--                <h3 class="text-xl font-bold mb-6 relative">--}}
-{{--                    <span class="bg-unipix-light h-1 w-8 absolute -bottom-2 left-0"></span>--}}
-{{--                    Ta'lim yo'nalishlari--}}
-{{--                </h3>--}}
-{{--                <ul class="space-y-3">--}}
-{{--                    <li>--}}
-{{--                        <a href="#" class="flex items-center text-gray-300 hover:text-white transition-colors duration-300 group">--}}
-{{--                            <span class="w-2 h-2 bg-unipix-light rounded-full mr-3 group-hover:w-3 transition-all duration-300"></span>--}}
-{{--                            Kompyuter texnologiyalari va muhandislik--}}
-{{--                        </a>--}}
-{{--                    </li>--}}
-{{--                    <li>--}}
-{{--                        <a href="#" class="flex items-center text-gray-300 hover:text-white transition-colors duration-300 group">--}}
-{{--                            <span class="w-2 h-2 bg-unipix-light rounded-full mr-3 group-hover:w-3 transition-all duration-300"></span>--}}
-{{--                            Iqtisodiyot va tabiy fanlar--}}
-{{--                        </a>--}}
-{{--                    </li>--}}
-{{--                </ul>--}}
-{{--            </div>--}}
-
-{{--            <!-- Column 4 - Newsletter Signup -->--}}
-{{--            <div>--}}
-{{--                <h3 class="text-xl font-bold mb-6 relative">--}}
-{{--                    <span class="bg-unipix-light h-1 w-8 absolute -bottom-2 left-0"></span>--}}
-{{--                    Aloqada qoling--}}
-{{--                </h3>--}}
-{{--                <p class="text-gray-300 mb-6">--}}
-{{--                    Turin Politexnika Universitetining Toshkent shahridagi filiali haqida yangiliklar, tadbirlar va e’lonnardan xabardor bo‘lish uchun obuna bo‘ling.--}}
-{{--                </p>--}}
-{{--                <div class="flex justify-between items-center">--}}
-{{--                    <p class="text-gray-400 text-sm">--}}
-{{--                        <i class="fas fa-headset mr-2 text-unipix-light"></i> Yordam xizmati: 24/7 faol--}}
-{{--                    </p>--}}
-{{--                    <a href="tel:+998712462331" class="bg-unipix-light text-white px-4 py-2 rounded-lg hover:bg-unipix-blue transition-colors duration-300">--}}
-{{--                        Bog‘lanish--}}
-{{--                    </a>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-
-{{--        </div>--}}
-
-{{--        <!-- Bottom Footer -->--}}
-{{--        <div class="container mx-auto mt-12 pt-6 border-t border-gray-800 px-6">--}}
-{{--            <div class="flex flex-col md:flex-row justify-between items-center">--}}
-{{--                <p class="text-gray-400 mb-4 md:mb-0">--}}
-{{--                    © 2025 Turin Politexnika Universitetining Toshkent shahridagi filiali. Barcha huquqlar himoyalangan.--}}
-{{--                </p>--}}
-{{--                <div class="flex space-x-6">--}}
-{{--                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 text-sm">Maxfiylik siyosati</a>--}}
-{{--                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 text-sm">Foydalanish shartlari</a>--}}
-{{--                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 text-sm">Cookie siyosati</a>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </footer>--}}
-
-
     <x-footer></x-footer>
 
 </body>

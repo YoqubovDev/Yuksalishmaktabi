@@ -79,20 +79,23 @@ final class MoonShineLayout extends AppLayout
             MenuGroup::make('Groups', [
                 MenuItem::make('Create new Group', GroupResource::class),
                 MenuItem::make('Course', CourseResource::class),
-
-
             ]),
 
-            MenuItem::make('Yutuqlar ', AchievementResource::class),
-            MenuItem::make('News', NewsResource::class),
-
+            MenuGroup::make('Yutuqlar va Yangiliklar', [
+                MenuItem::make('Yutuqlar ', AchievementResource::class),
+                MenuItem::make('Yangiliklar', NewsResource::class),
+            ]),
 
 
             MenuItem::make('Maktab Rahbariyat', HomeSliderResource::class),
             MenuItem::make('Qabul Rasmi', QabulrasmiResource::class),
-            MenuItem::make('Photo Card', PhotoCardResource::class),
-            MenuItem::make('Slider',SliderResource::class),
-            MenuItem::make('Contacts', ContactResource::class),
+            MenuItem::make('Aloqa uchun', ContactResource::class),
+
+
+            MenuGroup::make('Jarayonda ..... ', [
+                MenuItem::make('Photo Card', PhotoCardResource::class),
+                MenuItem::make('Slider',SliderResource::class),
+            ]),
         ];
     }
 
