@@ -24,11 +24,6 @@ Route::get('/achievements', [PhotocardController::class,'index'])->name('achieve
 Route::get('/aloqa', [ContactController::class, 'index'])->name('contact');
 
 
-// Route::get('/aloqa', function () {
-//     return view('aloqa');
-// })->name('contact');
-
-
 
 
 
