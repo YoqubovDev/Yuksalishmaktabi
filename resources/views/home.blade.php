@@ -314,18 +314,22 @@
             color: var(--white);
             padding: 1rem 0;
             box-shadow: var(--shadow);
+            position: relative;
+            z-index: 1000;
         }
 
         .container {
             width: 90%;
             max-width: 1200px;
             margin: 0 auto;
+            padding: 0 1rem;
         }
 
         .header-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: relative;
         }
 
         .logo {
@@ -336,17 +340,70 @@
 
         .logo img {
             height: 60px;
+            width: auto;
         }
 
         .logo-text {
             font-size: 1.5rem;
             font-weight: bold;
+            white-space: nowrap;
+        }
+
+        /* Hamburger Menu Button */
+        .mobile-menu-btn {
+            display: none;
+            background: transparent;
+            border: none;
+            color: var(--white);
+            font-size: 1.8rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            z-index: 1002;
+            transition: all 0.3s ease;
+            position: relative;
+            width: 40px;
+            height: 40px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mobile-menu-btn:hover {
+            opacity: 0.8;
+            transform: scale(1.1);
+        }
+
+        .mobile-menu-btn .menu-icon,
+        .mobile-menu-btn .close-icon {
+            position: absolute;
+            transition: all 0.3s ease;
+            font-size: 1.5rem;
+        }
+
+        .mobile-menu-btn .close-icon {
+            opacity: 0;
+            transform: rotate(90deg);
+        }
+
+        .mobile-menu-btn.active .menu-icon {
+            opacity: 0;
+            transform: rotate(90deg);
+        }
+
+        .mobile-menu-btn.active .close-icon {
+            opacity: 1;
+            transform: rotate(0deg);
+        }
+
+        nav {
+            position: relative;
         }
 
         nav ul {
             display: flex;
             gap: 2rem;
             list-style: none;
+            margin: 0;
+            padding: 0;
         }
 
         nav a {
@@ -354,6 +411,8 @@
             text-decoration: none;
             font-weight: 500;
             transition: all 0.3s ease;
+            padding: 0.5rem 0;
+            display: block;
         }
 
         nav a:hover {
@@ -490,7 +549,79 @@
             font-size: 30px;
         }
 
+        /* Mobile Navigation Styles */
         @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: flex;
+            }
+
+            header {
+                position: relative;
+            }
+
+            nav {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background-color: var(--primary-color);
+                transform: translateY(-100%);
+                transition: transform 0.4s ease-in-out;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+                z-index: 1001;
+                padding-top: 80px;
+                padding-bottom: 2rem;
+                max-height: 100vh;
+                overflow-y: auto;
+            }
+
+            nav.active {
+                transform: translateY(0);
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 0;
+                padding: 0 1rem;
+            }
+
+            nav ul li {
+                width: 100%;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            nav ul li:last-child {
+                border-bottom: none;
+            }
+
+            nav a {
+                padding: 1rem;
+                font-size: 1.1rem;
+                width: 100%;
+            }
+
+            .logo {
+                flex: 1;
+                min-width: 0;
+            }
+
+            .logo img {
+                height: 50px;
+                width: auto;
+            }
+
+            .logo-text {
+                font-size: 0.9rem;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+
+            .header-content {
+                gap: 1rem;
+            }
+
             .main-slider .slide {
                 height: 350px;
             }
@@ -498,14 +629,34 @@
             .nav-slider .slide {
                 height: 70px;
             }
+        }
 
-            .header-content {
-                flex-direction: column;
-                gap: 1rem;
+        @media (max-width: 480px) {
+            .logo-text {
+                font-size: 0.75rem;
             }
 
-            nav ul {
-                gap: 1rem;
+            .logo img {
+                height: 40px;
+            }
+
+            .container {
+                padding: 0 0.5rem;
+            }
+
+            .mobile-menu-btn {
+                width: 35px;
+                height: 35px;
+                font-size: 1.5rem;
+            }
+
+            nav {
+                padding-top: 70px;
+            }
+
+            nav a {
+                font-size: 1rem;
+                padding: 0.875rem;
             }
         }
     </style>
@@ -519,7 +670,11 @@
                   <img src="/image/yuksalish-maktabi-al-logo.jpeg" alt="yuksalish-maktabi-al-logo.jpeg">
                   <div class="logo-text">Jizzax Shahar Yuksalish Maktabi</div>
               </div>
-              <nav>
+              <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                  <i class="fas fa-bars menu-icon"></i>
+                  <i class="fas fa-times close-icon"></i>
+              </button>
+              <nav id="mainNav">
                   <ul>
                       <li><a href="{{route('home')}}">Home</a></li>
                       <li><a href="{{route('about')}}">Maktab haqida</a></li>
@@ -533,6 +688,58 @@
           </div>
       </div>
   </header>
+
+  <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+          const mainNav = document.getElementById('mainNav');
+          const navLinks = mainNav.querySelectorAll('a');
+
+          // Toggle menu on hamburger click
+          mobileMenuBtn.addEventListener('click', function() {
+              mainNav.classList.toggle('active');
+              mobileMenuBtn.classList.toggle('active');
+              // Prevent body scroll when menu is open
+              if (mainNav.classList.contains('active')) {
+                  document.body.style.overflow = 'hidden';
+              } else {
+                  document.body.style.overflow = '';
+              }
+          });
+
+          // Close menu when clicking on a link (mobile)
+          navLinks.forEach(link => {
+              link.addEventListener('click', function() {
+                  if (window.innerWidth <= 768) {
+                      mainNav.classList.remove('active');
+                      mobileMenuBtn.classList.remove('active');
+                      document.body.style.overflow = '';
+                  }
+              });
+          });
+
+          // Close menu when clicking outside (mobile)
+          document.addEventListener('click', function(event) {
+              const isClickInsideNav = mainNav.contains(event.target);
+              const isClickOnButton = mobileMenuBtn.contains(event.target);
+              
+              if (window.innerWidth <= 768 && !isClickInsideNav && !isClickOnButton && mainNav.classList.contains('active')) {
+                  mainNav.classList.remove('active');
+                  mobileMenuBtn.classList.remove('active');
+                  document.body.style.overflow = '';
+              }
+          });
+
+          // Handle window resize
+          window.addEventListener('resize', function() {
+              if (window.innerWidth > 768) {
+                  mainNav.classList.remove('active');
+                  mobileMenuBtn.classList.remove('active');
+                  document.body.style.overflow = '';
+              }
+          });
+      });
+  </script>
 
   <!-- Hero Slider Section -->
   <section class="main-slider">
@@ -812,4 +1019,3 @@
   </script>
 </body>
 </html>
-

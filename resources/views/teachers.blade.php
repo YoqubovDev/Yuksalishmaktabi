@@ -22,28 +22,6 @@
         }
     </script>
 <body class="bg-gray-50">
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <img src="/image/yuksalish-maktabi-al-logo.jpeg" alt="yuksalish-maktabi-al-logo.jpeg">
-                    <div class="logo-text">Jizzax Shahar Yuksalish Maktabi</div>
-                </div>
-                <nav>
-                    <ul>
-                        <li><a href="{{route('home')}}">Home</a></li>
-                        <li><a href="{{route('about')}}">Maktab haqida</a></li>
-                        <!-- <li><a href="{{route('photo')}}">Yangiliklar</a></li> -->
-                        <li><a href="{{route('teachers')}}">O'qituvchilar</a></li>
-                        <li><a href="{{route('subject')}}">Dars jarayonlari</a></li>
-                        <li><a href="{{route('achievements')}}">Yutuqlar</a></li>
-                        <li><a href="{{route('contact')}}">Aloqa</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
 
     <!-- Teachers Hero Section -->
     <section class="py-16 bg-gradient-to-b from-blue-900 to-blue-800">

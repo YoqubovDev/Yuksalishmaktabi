@@ -2272,16 +2272,16 @@
         },
         {
             "name": "moonshine/moonshine",
-            "version": "3.16.3",
+            "version": "3.16.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/moonshine-software/moonshine.git",
-                "reference": "13dddde90377ab061ee78033ff3b0cffd29c632a"
+                "reference": "0eeb5108b92cf9936a566a48e65ea0a26fc46413"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/moonshine-software/moonshine/zipball/13dddde90377ab061ee78033ff3b0cffd29c632a",
-                "reference": "13dddde90377ab061ee78033ff3b0cffd29c632a",
+                "url": "https://api.github.com/repos/moonshine-software/moonshine/zipball/0eeb5108b92cf9936a566a48e65ea0a26fc46413",
+                "reference": "0eeb5108b92cf9936a566a48e65ea0a26fc46413",
                 "shasum": ""
             },
             "require": {
@@ -2377,7 +2377,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2025-09-04T06:03:42+00:00"
+            "time": "2025-09-24T13:03:13+00:00"
         },
         {
             "name": "nesbot/carbon",

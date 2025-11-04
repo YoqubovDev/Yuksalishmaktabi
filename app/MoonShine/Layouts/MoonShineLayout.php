@@ -72,7 +72,7 @@ final class MoonShineLayout extends AppLayout
 
             MenuGroup::make('O\'qituvchlar', [
                 MenuItem::make('Teacher', TeacherResource::class),
-                MenuItem::make('Departments', DepartmentsResource::class),
+                MenuItem::make('Bo\'limlar', DepartmentsResource::class),
 
             ]),
 
