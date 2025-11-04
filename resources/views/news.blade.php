@@ -567,27 +567,7 @@
 </head>
 <body class="font-sans bg-gray-100">
     <!-- Navigation -->
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <img src="/image/yuksalish-maktabi-al-logo.jpeg" alt="yuksalish-maktabi-al-logo.jpeg">
-                    <div class="logo-text">Jizzax shahar Yuksalish maktabi</div>
-                </div>
-                <nav>
-                    <ul>
-                        <li><a href="{{route('home')}}">Home</a></li>
-                        <li><a href="{{route('about')}}">Maktab haqida</a></li>
-                        <!-- <li><a href="{{route('photo')}}">Yangiliklar</a></li> -->
-                        <li><a href="{{route('teachers')}}">O'qituvchilar</a></li>
-                        <li><a href="{{route('subject')}}">Dars jarayonlari</a></li>
-                        <li><a href="{{route('achievements')}}">Yutuqlar</a></li>
-                        <li><a href="{{route('contact')}}">Aloqa</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
+    <x-header></x-header>
 
     <!-- Hero Section -->
     <section class="bg-blue-900 text-white text-center py-20">
